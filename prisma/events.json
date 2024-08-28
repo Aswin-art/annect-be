@@ -9,13 +9,13 @@
     "image": "tech_expo.jpg",
     "tf_image": "tech_expo_tf.jpg",
     "location": "Jakarta Convention Center",
-    "is_paid": 1,
+    "is_paid": true,
     "price": 500000,
     "status": "ONGOING",
     "link_group": "t.me/msib_batch_7",
-    "event_date": "2024-09-15 10:00:00",
-    "created_at": "2024-08-23 14:00:00.000",
-    "updated_at": "2024-08-23 14:00:00.000"
+    "event_date": "2024-09-15T10:00:00.000Z",
+    "created_at": "2024-08-23T14:00:00.000Z",
+    "updated_at": "2024-08-23T14:00:00.000Z"
   },
   {
     "id": "ck9x7vb7v000002mqxyz456e",
@@ -27,13 +27,13 @@
     "image": "esports_tournament.jpg",
     "tf_image": "esports_tournament_tf.jpg",
     "location": "Surabaya Convention Hall",
-    "is_paid": 1,
+    "is_paid": true,
     "price": 300000,
     "status": "PENDING",
     "link_group": "t.me/msib_batch_7",
-    "event_date": "2024-10-05 09:00:00",
-    "created_at": "2024-08-23 14:05:00.000",
-    "updated_at": "2024-08-23 14:05:00.000"
+    "event_date": "2024-10-05T09:00:00.000Z",
+    "created_at": "2024-08-23T14:05:00.000Z",
+    "updated_at": "2024-08-23T14:05:00.000Z"
   },
   {
     "id": "ck9x7vb7v000003mqfgh789f",
@@ -45,13 +45,13 @@
     "image": "wellness_workshop.jpg",
     "tf_image": "wellness_workshop_tf.jpg",
     "location": "Bali Retreat Center",
-    "is_paid": 0,
+    "is_paid": false,
     "price": null,
     "status": "ONGOING",
     "link_group": "t.me/msib_batch_7",
-    "event_date": "2024-09-20 08:30:00",
-    "created_at": "2024-08-23 14:10:00.000",
-    "updated_at": "2024-08-23 14:10:00.000"
+    "event_date": "2024-09-20T08:30:00.000Z",
+    "created_at": "2024-08-23T14:10:00.000Z",
+    "updated_at": "2024-08-23T14:10:00.000Z"
   },
   {
     "id": "ck9x7vb7v000004mqijk321g",
@@ -63,13 +63,13 @@
     "image": "ai_conference.jpg",
     "tf_image": "ai_conference_tf.jpg",
     "location": "Bandung Convention Center",
-    "is_paid": 1,
+    "is_paid": true,
     "price": 750000,
     "status": "PENDING",
     "link_group": "t.me/msib_batch_7",
-    "event_date": "2024-11-12 09:00:00",
-    "created_at": "2024-08-23 14:15:00.000",
-    "updated_at": "2024-08-23 14:15:00.000"
+    "event_date": "2024-11-12T09:00:00.000Z",
+    "created_at": "2024-08-23T14:15:00.000Z",
+    "updated_at": "2024-08-23T14:15:00.000Z"
   },
   {
     "id": "ck9x7vb7v000005mqlmn654h",
@@ -81,13 +81,13 @@
     "image": "game_dev_meetup.jpg",
     "tf_image": "game_dev_meetup_tf.jpg",
     "location": "Yogyakarta Tech Hub",
-    "is_paid": 0,
+    "is_paid": false,
     "price": null,
     "status": "DONE",
     "link_group": "t.me/msib_batch_7",
-    "event_date": "2024-08-01 14:00:00",
-    "created_at": "2024-08-23 14:20:00.000",
-    "updated_at": "2024-08-23 14:20:00.000"
+    "event_date": "2024-08-01T14:00:00.000Z",
+    "created_at": "2024-08-23T14:20:00.000Z",
+    "updated_at": "2024-08-23T14:20:00.000Z"
   },
   {
     "id": "ck9x7vb7v000006mqopq987i",
@@ -99,13 +99,13 @@
     "image": "yoga_retreat.jpg",
     "tf_image": "yoga_retreat_tf.jpg",
     "location": "Ubud Wellness Center",
-    "is_paid": 1,
+    "is_paid": true,
     "price": 400000,
     "status": "PENDING",
     "link_group": "t.me/msib_batch_7",
-    "event_date": "2024-12-01 07:00:00",
-    "created_at": "2024-08-23 14:25:00.000",
-    "updated_at": "2024-08-23 14:25:00.000"
+    "event_date": "2024-12-01T07:00:00.000Z",
+    "created_at": "2024-08-23T14:25:00.000Z",
+    "updated_at": "2024-08-23T14:25:00.000Z"
   },
   {
     "id": "ck9x7vb7v000007mqrtu543j",
@@ -117,13 +117,13 @@
     "image": "cybersecurity_summit.jpg",
     "tf_image": "cybersecurity_summit_tf.jpg",
     "location": "Jakarta Tech Park",
-    "is_paid": 1,
+    "is_paid": true,
     "price": 650000,
     "status": "ONGOING",
     "link_group": "t.me/msib_batch_7",
-    "event_date": "2024-09-25 10:00:00",
-    "created_at": "2024-08-23 14:30:00.000",
-    "updated_at": "2024-08-23 14:30:00.000"
+    "event_date": "2024-09-25T10:00:00.000Z",
+    "created_at": "2024-08-23T14:30:00.000Z",
+    "updated_at": "2024-08-23T14:30:00.000Z"
   },
   {
     "id": "ck9x7vb7v000008mqstu876k",
@@ -135,48 +135,12 @@
     "image": "indie_game_fest.jpg",
     "tf_image": "indie_game_fest_tf.jpg",
     "location": "Bali Indie Arena",
-    "is_paid": 1,
+    "is_paid": true,
     "price": 200000,
     "status": "DONE",
     "link_group": "t.me/msib_batch_7",
-    "event_date": "2024-07-15 09:00:00",
-    "created_at": "2024-08-23 14:35:00.000",
-    "updated_at": "2024-08-23 14:35:00.000"
-  },
-  {
-    "id": "ck9x7vb7v000009mquvw210l",
-    "channel_id": "ck9wz8q7v000003mqa1khqvxs",
-    "category_id": "ck9x1rp7v000003mqjlchfbvn",
-    "tag_id": "ck9x3sl7v000003mq84vcxkfp",
-    "name": "Healthy Cooking Class",
-    "description": "Master the art of healthy cooking.",
-    "image": "healthy_cooking_class.jpg",
-    "tf_image": "healthy_cooking_class_tf.jpg",
-    "location": "Jakarta Culinary School",
-    "is_paid": 0,
-    "price": null,
-    "status": "PENDING",
-    "link_group": "t.me/msib_batch_7",
-    "event_date": "2024-10-18 10:00:00",
-    "created_at": "2024-08-23 14:40:00.000",
-    "updated_at": "2024-08-23 14:40:00.000"
-  },
-  {
-    "id": "ck9x7vb7v000010mqxyz432m",
-    "channel_id": "ck9wz8q7v000001mqcn64htz8",
-    "category_id": "ck9x1rp7v000001mqerfg8lck",
-    "tag_id": "ck9x3sl7v000001mqjc4pqvtg",
-    "name": "Seminar Nasional Tuak",
-    "description": "Ikuti Seminar Tuak.",
-    "image": "blockchain_summit.jpg",
-    "tf_image": "blockchain_summit_tf.jpg",
-    "location": "Jakarta Blockchain Hub",
-    "is_paid": 1,
-    "price": 800000,
-    "status": "ONGOING",
-    "link_group": "t.me/msib_batch_7",
-    "event_date": "2024-10-22 09:30:00",
-    "created_at": "2024-08-23 14:45:00.000",
-    "updated_at": "2024-08-23 14:45:00.000"
+    "event_date": "2024-07-15T09:00:00.000Z",
+    "created_at": "2024-08-23T14:35:00.000Z",
+    "updated_at": "2024-08-23T14:35:00.000Z"
   }
 ]

@@ -5,8 +5,8 @@
     "email": "alice.johnson@example.com",
     "image": "alice.jpg",
     "role": "ADMIN",
-    "created_at": "2024-08-23 10:30:00.000",
-    "updated_at": "2024-08-23 10:30:00.000"
+    "created_at": "2024-08-23T10:30:00.000Z",
+    "updated_at": "2024-08-23T10:30:00.000Z"
   },
   {
     "id": "ck9wz1p7v000002mqy5jk7gtl",
@@ -14,8 +14,8 @@
     "email": "bob.smith@example.com",
     "image": "bob.jpg",
     "role": "USER",
-    "created_at": "2024-08-23 10:35:00.000",
-    "updated_at": "2024-08-23 10:35:00.000"
+    "created_at": "2024-08-23T10:35:00.000Z",
+    "updated_at": "2024-08-23T10:35:00.000Z"
   },
   {
     "id": "ck9wz1p7v000003mqflht9thx",
@@ -23,8 +23,8 @@
     "email": "charlie.brown@example.com",
     "image": "charlie.jpg",
     "role": "USER",
-    "created_at": "2024-08-23 10:40:00.000",
-    "updated_at": "2024-08-23 10:40:00.000"
+    "created_at": "2024-08-23T10:40:00.000Z",
+    "updated_at": "2024-08-23T10:40:00.000Z"
   },
   {
     "id": "user_2kyN7GxSTQcjdJTq8vRG4RkzW8F",
@@ -32,7 +32,7 @@
     "email": "aZwinarung@mail.com",
     "image": "https://img.clerk.com/eyJ0eXBlIjoicHJveHkiLCiJodHRwczovL2y5jbGVyay5kZXYvb2F1dGh2xlL2ltZ18ya3lON01ueERQXVIajM2ZkRwQ25pa2gifQ",
     "role": "USER",
-    "created_at": "2024-08-28 02:53:20.111",
-    "updated_at": "2024-08-28 02:53:20.111"
+    "created_at": "2024-08-28T02:53:20.111Z",
+    "updated_at": "2024-08-28T02:53:20.111Z"
   }
 ]

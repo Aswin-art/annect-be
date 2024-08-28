@@ -1,5 +1,5 @@
 const categories = require("./categories.json");
-const user = require("./users.json");
+const users = require("./users.json");
 const follows = require("./follows.json");
 const tags = require("./tags.json");
 const events = require("./events.json");
@@ -12,35 +12,35 @@ const main = async () => {
   console.log("Truncating all table...");
 
   await prisma.favorites.deleteMany();
-  console.log("Truncated table favories...");
+  console.log("Truncated table favorites...");
   await prisma.follows.deleteMany();
   console.log("Truncated table follows...");
-  await prisma.channels.deleteMany();
-  console.log("Truncated table channels...");
-  await prisma.categories.deleteMany();
-  console.log("Truncated table categories...");
-  await prisma.tags.deleteMany();
-  console.log("Truncated table tags...");
   await prisma.chats.deleteMany();
   console.log("Truncated table chats...");
   await prisma.events.deleteMany();
   console.log("Truncated table events...");
+  await prisma.channels.deleteMany();
+  console.log("Truncated table channels...");
+  await prisma.tags.deleteMany();
+  console.log("Truncated table tags...");
+  await prisma.categories.deleteMany();
+  console.log("Truncated table categories...");
   await prisma.users.deleteMany();
   console.log("Truncated table users...");
   console.log("Truncated all tables.");
 
   console.log("Seeding all tables");
 
+  await prisma.categories.createMany({
+    data: categories,
+  });
+
   await prisma.users.createMany({
-    data: user,
+    data: users,
   });
 
   await prisma.tags.createMany({
     data: tags,
-  });
-
-  await prisma.categories.createMany({
-    data: categories,
   });
 
   await prisma.channels.createMany({
@@ -51,19 +51,19 @@ const main = async () => {
     data: events,
   });
 
-  await prisma.follows.createMany({
-    data: follows,
-  });
-
   await prisma.chats.createMany({
     data: chats,
+  });
+
+  await prisma.follows.createMany({
+    data: follows,
   });
 
   await prisma.favorites.createMany({
     data: favorites,
   });
 
-  console.log("Seeded all table!");
+  console.log("Seeded all tables!");
 };
 
 main()
