@@ -25,10 +25,6 @@ const followController = require("./follows/follows.controller");
 const favoriteController = require("./favorites/favorites.controller");
 const eventController = require("./events/events.controller");
 
-app.use("/", (req, res) => {
-  res.send("Hello, World!");
-});
-
 app.use("/api/users", upload.none(), usersController);
 
 app.use("/api/categories", upload.none(), categoriesController);
