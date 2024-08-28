@@ -1,47 +1,71 @@
-const { PrismaClient } = require("@prisma/client");
-const prisma = new PrismaClient();
+const categories = require("./categories.json");
+const user = require("./users.json");
+const follows = require("./follows.json");
+const tags = require("./tags.json");
+const events = require("./events.json");
+const channels = require("./channels.json");
+const chats = require("./chats.json");
+const favorites = require("./favorites.json");
+const prisma = require("../src/db/index");
 
-async function main() {
-  const alice = await prisma.user.upsert({
-    where: { email: "alice@prisma.io" },
-    update: {},
-    create: {
-      email: "alice@prisma.io",
-      name: "Alice",
-      posts: {
-        create: {
-          title: "Check out Prisma with Next.js",
-          content: "https://www.prisma.io/nextjs",
-          published: true,
-        },
-      },
-    },
+const main = async () => {
+  console.log("Truncating all table...");
+
+  await prisma.favorites.deleteMany();
+  console.log("Truncated table favories...");
+  await prisma.follows.deleteMany();
+  console.log("Truncated table follows...");
+  await prisma.channels.deleteMany();
+  console.log("Truncated table channels...");
+  await prisma.categories.deleteMany();
+  console.log("Truncated table categories...");
+  await prisma.tags.deleteMany();
+  console.log("Truncated table tags...");
+  await prisma.chats.deleteMany();
+  console.log("Truncated table chats...");
+  await prisma.events.deleteMany();
+  console.log("Truncated table events...");
+  await prisma.users.deleteMany();
+  console.log("Truncated table users...");
+  console.log("Truncated all tables.");
+
+  console.log("Seeding all tables");
+
+  await prisma.users.createMany({
+    data: user,
   });
 
-  const bob = await prisma.user.upsert({
-    where: { email: "bob@prisma.io" },
-    update: {},
-    create: {
-      email: "bob@prisma.io",
-      name: "Bob",
-      posts: {
-        create: [
-          {
-            title: "Follow Prisma on Twitter",
-            content: "https://twitter.com/prisma",
-            published: true,
-          },
-          {
-            title: "Follow Nexus on Twitter",
-            content: "https://twitter.com/nexusgql",
-            published: true,
-          },
-        ],
-      },
-    },
+  await prisma.tags.createMany({
+    data: tags,
   });
-  console.log({ alice, bob });
-}
+
+  await prisma.categories.createMany({
+    data: categories,
+  });
+
+  await prisma.channels.createMany({
+    data: channels,
+  });
+
+  await prisma.events.createMany({
+    data: events,
+  });
+
+  await prisma.follows.createMany({
+    data: follows,
+  });
+
+  await prisma.chats.createMany({
+    data: chats,
+  });
+
+  await prisma.favorites.createMany({
+    data: favorites,
+  });
+
+  console.log("Seeded all table!");
+};
+
 main()
   .then(async () => {
     await prisma.$disconnect();

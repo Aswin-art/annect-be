@@ -1,0 +1,46 @@
+[
+  {
+    "id": "ck9wz8q7v000001mqcn64htz8",
+    "user_id": "ck9wz1p7v000001mqcgjd3v29",
+    "name": "Tech Talks",
+    "description": "A channel for discussing the latest in technology.",
+    "image": "tech_talks.jpg",
+    "created_at": "2024-08-23 11:00:00.000",
+    "updated_at": "2024-08-23 11:00:00.000",
+    "nik": null,
+    "no_rek": null
+  },
+  {
+    "id": "ck9wz8q7v000002mqcpjq6gxm",
+    "user_id": "ck9wz1p7v000002mqy5jk7gtl",
+    "name": "Gaming Hub",
+    "description": "All about the latest games and gaming trends.",
+    "image": "gaming_hub.jpg",
+    "created_at": "2024-08-23 11:05:00.000",
+    "updated_at": "2024-08-23 11:05:00.000",
+    "nik": null,
+    "no_rek": null
+  },
+  {
+    "id": "ck9wz8q7v000003mqa1khqvxs",
+    "user_id": "ck9wz1p7v000003mqflht9thx",
+    "name": "Healthy Living",
+    "description": "Tips and discussions on maintaining a healthy lifestyle.",
+    "image": "healthy_living.jpg",
+    "created_at": "2024-08-23 11:10:00.000",
+    "updated_at": "2024-08-23 11:10:00.000",
+    "nik": null,
+    "no_rek": null
+  },
+  {
+    "id": "cm06h980g00009gingr8geaqz",
+    "user_id": "ck9wz1p7v000001mqcgjd3v29",
+    "name": "delvi",
+    "description": "PROPLAYER",
+    "image": "1724403479386-CLUB (1).jpg",
+    "created_at": "2024-08-23 08:56:30.931",
+    "updated_at": "2024-08-23 08:57:59.410",
+    "nik": null,
+    "no_rek": null
+  }
+]
