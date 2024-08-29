@@ -1,40 +1,40 @@
-const prisma = require('../db');
+const prisma = require("../db");
 
 const findallusers = async () => {
-    const user = await prisma.users.findMany();
-    return user;
-}
+  const user = await prisma.users.findMany();
+  return user;
+};
 
-const finduserbyid = async (id) => {
-    const user = await prisma.users.findUnique({
-        where:{
-            id: id,
+const finduserbyid = async (user_id) => {
+  const user = await prisma.users.findUnique({
+    where: {
+      id: user_id,
+    },
+    include: {
+      user_events: {
+        include: {
+          events: true,
         },
-        include:{
-            user_events:{
-                include:{
-                    events:true
-                },
-                take: 3
-            },
-            channels:{
-                include:{
-                    users:true
-                },
-                take: 3
-            },
-            favorites:{
-                include:{
-                    events:true
-                },
-                take: 3
-            }
+        take: 3,
+      },
+      channels: {
+        include: {
+          users: true,
         },
-    })
-    return user;
-}
+        take: 3,
+      },
+      favorites: {
+        include: {
+          events: true,
+        },
+        take: 3,
+      },
+    },
+  });
+  return user;
+};
 
 module.exports = {
-    findallusers,
-    finduserbyid,
-}
+  findallusers,
+  finduserbyid,
+};

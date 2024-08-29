@@ -56,7 +56,7 @@ model events {
   image       String?        @db.VarChar(255)
   location    String?        @db.VarChar(255)
   link_group  String         @db.VarChar(255)
-  is_paid     Boolean?
+  is_paid     Boolean?       @default(false)
   price       Float?
   status      events_status? @default(PENDING)
   event_date  DateTime?      @db.DateTime(0)
