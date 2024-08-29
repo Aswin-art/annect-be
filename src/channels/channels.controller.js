@@ -1,5 +1,11 @@
 const express = require("express");
-const { getall, getbyid, create, update } = require("./channels.service");
+const {
+  getall,
+  getbyid,
+  create,
+  update,
+  getchannnelbyiduser,
+} = require("./channels.service");
 const router = express.Router();
 
 router.get("/", async (req, res) => {
@@ -10,8 +16,18 @@ router.get("/", async (req, res) => {
     if (name) {
       ch = await getall(name, user_id);
     } else {
-      ch = await getall(user_id);
+      ch = await getall(name, user_id);
     }
+    res.send(ch);
+  } catch (error) {
+    res.status(400).send(error.message);
+  }
+});
+
+router.get("/user/:user_id", async (req, res) => {
+  try {
+    const user_id = req.params.user_id;
+    const ch = await getchannnelbyiduser(user_id);
     res.send(ch);
   } catch (error) {
     res.status(400).send(error.message);
@@ -46,12 +62,9 @@ router.post("/", async (req, res) => {
 });
 
 router.post("/:id", async (req, res) => {
-  const { file } = req;
-  const image = file.filename;
   try {
     const id = req.params.id;
     const channelsdata = req.body;
-    channelsdata.image = image;
     const ch = await update(id, channelsdata);
     res.send(ch);
   } catch (error) {

@@ -1,8 +1,19 @@
-const { findall, findbyid, insert, edit } = require("./channel.repository");
+const {
+  findall,
+  findbyid,
+  insert,
+  edit,
+  findchannelbyiduser,
+} = require("./channel.repository");
 
 const getall = async (name = "", user_id) => {
   const ch = await findall(name, user_id);
   return ch;
+};
+
+const getchannnelbyiduser = async (user_id) => {
+  const channel = await findchannelbyiduser(user_id);
+  return channel;
 };
 
 const getbyid = async (id) => {
@@ -29,4 +40,5 @@ module.exports = {
   getbyid,
   create,
   update,
+  getchannnelbyiduser,
 };

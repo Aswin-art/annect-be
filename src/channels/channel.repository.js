@@ -18,6 +18,31 @@ const findall = async (name, user_id) => {
   return ch;
 };
 
+const findchannelbyiduser = async (user_id) => {
+  const channel = await prisma.channels.findFirst({
+    where: {
+      user_id: user_id,
+    },
+    include: {
+      events: {
+        include: {
+          categories: true,
+          tags: true,
+          user_events: true,
+        },
+      },
+      users: true,
+      follows: {
+        include: {
+          users: true,
+        },
+      },
+      _count: true,
+    },
+  });
+  return channel;
+};
+
 const findbyid = async (id) => {
   const ch = await prisma.channels.findUnique({
     where: {
@@ -66,4 +91,5 @@ module.exports = {
   findbyid,
   insert,
   edit,
+  findchannelbyiduser,
 };

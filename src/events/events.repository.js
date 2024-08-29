@@ -9,6 +9,8 @@ const getAll = () =>
         },
       },
       channels: true,
+      tags: true,
+      categories: true,
     },
   });
 
@@ -26,6 +28,8 @@ const getDetail = (eventId) =>
     },
     include: {
       channels: true,
+      tags: true,
+      categories: true,
     },
   });
 
