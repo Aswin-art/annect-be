@@ -3,6 +3,9 @@ const cuid = require("cuid");
 
 const findall = async (name, user_id) => {
   const ch = await prisma.channels.findMany({
+    include: {
+      users: true,
+    },
     where: {
       NOT: {
         user_id: user_id,
@@ -10,9 +13,6 @@ const findall = async (name, user_id) => {
       name: {
         contains: name,
       },
-    },
-    include: {
-      users: true,
     },
   });
   return ch;

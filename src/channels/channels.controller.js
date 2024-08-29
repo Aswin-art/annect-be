@@ -10,7 +10,7 @@ router.get("/", async (req, res) => {
     if (name) {
       ch = await getall(name, user_id);
     } else {
-      ch = await getall(name, user_id);
+      ch = await getall(user_id);
     }
     res.send(ch);
   } catch (error) {
