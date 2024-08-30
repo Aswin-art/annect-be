@@ -1,22 +1,22 @@
-const { findall, insert, edit } = require('./categories.repository');
+const { findall, insert, edit } = require("./categories.repository");
 
-const getall = async () => {
-    const cg = await findall()
-    return cg;
-}
+const getall = async (name = "") => {
+  const cg = await findall(name);
+  return cg;
+};
 
 const create = async (categoriesdata) => {
-    const cg = await insert(categoriesdata)
-    return cg;
-}
+  const cg = await insert(categoriesdata);
+  return cg;
+};
 
 const update = async (id, categoriesdata) => {
-    const cg = await edit(id, categoriesdata)
-    return cg;
-}
+  const cg = await edit(id, categoriesdata);
+  return cg;
+};
 
 module.exports = {
-    getall,
-    create,
-    update,
-}
+  getall,
+  create,
+  update,
+};

@@ -6,7 +6,7 @@ const {
   getSimilar,
 } = require("./events.repository");
 
-const getAllEvents = () => getAll();
+const getAllEvents = (name = "") => getAll(name);
 
 const updateEvent = (eventData, eventId) => updateById(eventData, eventId);
 

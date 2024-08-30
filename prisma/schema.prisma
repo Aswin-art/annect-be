@@ -19,7 +19,7 @@ model channels {
   id          String    @id @default(cuid())
   user_id     String?   @db.VarChar(255)
   name        String?   @db.VarChar(255)
-  description String?   @db.VarChar(255)
+  description String?   @db.LongText
   image       String?   @db.VarChar(255)
   nik         String?   @db.VarChar(255)
   no_rek      String?   @db.VarChar(255)
@@ -52,7 +52,7 @@ model events {
   category_id String?        @db.VarChar(255)
   tag_id      String?        @db.VarChar(255)
   name        String?        @db.VarChar(255)
-  description String?        @db.VarChar(255)
+  description String?        @db.LongText
   image       String?        @db.VarChar(255)
   location    String?        @db.VarChar(255)
   link_group  String         @db.VarChar(255)
