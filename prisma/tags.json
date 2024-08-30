@@ -1,86 +1,22 @@
 [
   {
-    "id": "ck9x3sl7v000001mqjc4pqvtg",
-    "name": "Inovasi",
-    "created_at": "2024-08-23T12:30:00.000Z",
-    "updated_at": "2024-08-23T12:30:00.000Z"
+    "id": "ck9x3sl7v000002nqjc4pqvth",
+    "name": "Beasiswa"
   },
   {
-    "id": "ck9x3sl7v000002mqkvrjtybg",
-    "name": "Esports",
-    "created_at": "2024-08-23T12:35:00.000Z",
-    "updated_at": "2024-08-23T12:35:00.000Z"
+    "id": "ck9x3sl7v000003oqjc4pqvti",
+    "name": "Seminar"
   },
   {
-    "id": "ck9x3sl7v000003mq84vcxkfp",
-    "name": "Teknologi",
-    "created_at": "2024-08-23T12:40:00.000Z",
-    "updated_at": "2024-08-23T12:40:00.000Z"
+    "id": "ck9x3sl7v000004pqjc4pqvtj",
+    "name": "Bootcamp"
   },
   {
-    "id": "ckz9t9m000001o9ha9jthx7dn",
-    "name": "Aksi Keberlangsungan",
-    "created_at": "2024-08-28T16:37:48.920Z",
-    "updated_at": "2024-08-29T10:15:00.000Z"
+    "id": "ck9x3sl7v000005rqjc4pqvtk",
+    "name": "Workshop"
   },
   {
-    "id": "ckz9t9m000002o9ha9xthx8ty",
-    "name": "Aksi Lingkungan",
-    "created_at": "2024-08-28T16:37:48.920Z",
-    "updated_at": "2024-08-29T11:00:00.000Z"
-  },
-  {
-    "id": "ckz9t9m000003o9ha9ythx9uz",
-    "name": "Donor Darah",
-    "created_at": "2024-08-28T16:37:48.920Z",
-    "updated_at": "2024-08-30T13:25:00.000Z"
-  },
-  {
-    "id": "ckz9t9m000004o9ha90thx3ad",
-    "name": "Gratis",
-    "created_at": "2024-08-28T16:37:48.920Z",
-    "updated_at": "2024-08-31T14:40:00.000Z"
-  },
-  {
-    "id": "ckz9t9m000005o9ha91thx4bc",
-    "name": "Volunteer",
-    "created_at": "2024-08-28T16:37:48.920Z",
-    "updated_at": "2024-09-01T09:55:00.000Z"
-  },
-  {
-    "id": "ckz9t9m000006o9ha92thx5de",
-    "name": "Berbayar",
-    "created_at": "2024-08-28T16:37:48.920Z",
-    "updated_at": "2024-09-02T10:20:00.000Z"
-  },
-  {
-    "id": "ckz9t9m000007o9ha93thx6fg",
-    "name": "Recycling",
-    "created_at": "2024-08-28T16:37:48.920Z",
-    "updated_at": "2024-09-03T12:30:00.000Z"
-  },
-  {
-    "id": "ckz9t9m000008o9ha94thx7hj",
-    "name": "Kesehatan Mental",
-    "created_at": "2024-08-28T16:37:48.920Z",
-    "updated_at": "2024-09-04T16:45:00.000Z"
-  },
-  {
-    "id": "ckz9t9m000009o9ha95thx8ik",
-    "name": "Penyelamatan Hewan",
-    "created_at": "2024-08-28T16:37:48.920Z",
-    "updated_at": "2024-09-05T11:10:00.000Z"
-  },
-  {
-    "id": "ckz9t9m00000ao9ha96thx9jl",
-    "name": "Astronomi",
-    "created_at": "2024-08-28T16:37:48.920Z",
-    "updated_at": "2024-09-06T17:00:00.000Z"
-  },
-  {
-    "id": "cm06i8u1s0000mkincse25lx3",
-    "name": "Komputer",
-    "created_at": "2024-08-23T09:24:12.450Z",
-    "updated_at": "2024-08-23T09:24:28.192Z"
+    "id": "ck9x3sl7v000006sqjc4pqvtl",
+    "name": "Lainnya"
   }
 ]

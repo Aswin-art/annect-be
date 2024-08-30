@@ -16,16 +16,18 @@ model categories {
 }
 
 model channels {
-  id          String    @id @default(cuid())
-  user_id     String?   @db.VarChar(255)
-  name        String?   @db.VarChar(255)
-  description String?   @db.LongText
-  image       String?   @db.VarChar(255)
-  nik         String?   @db.VarChar(255)
-  no_rek      String?   @db.VarChar(255)
-  created_at  DateTime  @default(now())
-  updated_at  DateTime  @updatedAt
-  users       users?    @relation(fields: [user_id], references: [id], onDelete: Restrict, onUpdate: Restrict, map: "channels_ibfk_1")
+  id          String          @id @default(cuid())
+  user_id     String?         @db.VarChar(255)
+  name        String?         @db.VarChar(255)
+  description String?         @db.LongText
+  image       String?         @db.VarChar(255)
+  nik         String?         @db.VarChar(255)
+  no_rek      String?         @db.VarChar(255)
+  phone       String?         @db.VarChar(255)
+  status      channels_status @default(UNVERIFIED)
+  created_at  DateTime        @default(now())
+  updated_at  DateTime        @updatedAt
+  users       users?          @relation(fields: [user_id], references: [id], onDelete: Restrict, onUpdate: Restrict, map: "channels_ibfk_1")
   events      events[]
   follows     follows[]
 
@@ -147,4 +149,9 @@ enum events_status {
   DONE
   PENDING
   ONGOING
+}
+
+enum channels_status {
+  VERIFIED
+  UNVERIFIED
 }

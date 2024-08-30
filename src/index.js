@@ -25,6 +25,7 @@ const followController = require("./follows/follows.controller");
 const favoriteController = require("./favorites/favorites.controller");
 const eventController = require("./events/events.controller");
 const dashboardcontroller = require("./dashboards/dashboard.controller");
+const userEventController = require("./user_events/user_events.controller");
 
 app.use("/api/users", upload.none(), usersController);
 
@@ -36,6 +37,7 @@ app.use("/api/events", upload.none(), eventController);
 
 app.use("/api/channels", upload.none(), cheannelsController);
 app.use("/api/dashboard", upload.none(), dashboardcontroller);
+app.use("/api/user_events", upload.none(), userEventController);
 
 app.listen(PORT, () => {
   console.log("express API runningin port: " + PORT);

@@ -1,98 +1,10 @@
 [
   {
-    "id": "ck9x1rp7v000001mqerfg8lck",
-    "name": "Seminar",
-    "created_at": "2024-08-23T12:00:00.000Z",
-    "updated_at": "2024-08-23T12:00:00.000Z"
+    "id": "ck9x3sl7v000001mqjc4pqvtg",
+    "name": "mahasiswa/siswa"
   },
   {
-    "id": "ck9x1rp7v000002mqebdgw9xt",
-    "name": "Gim",
-    "created_at": "2024-08-23T12:05:00.000Z",
-    "updated_at": "2024-08-23T12:05:00.000Z"
-  },
-  {
-    "id": "ck9x1rp7v000003mqjlchfbvn",
-    "name": "Kesehatan",
-    "created_at": "2024-08-23T12:10:00.000Z",
-    "updated_at": "2024-08-23T12:10:00.000Z"
-  },
-  {
-    "id": "cm06i1kzi0000f4ingchcehvh",
-    "name": "Beasiswa",
-    "created_at": "2024-08-23T09:18:34.113Z",
-    "updated_at": "2024-08-23T09:18:45.321Z"
-  },
-  {
-    "id": "cm0dlf25c00020clhgpalgacn",
-    "name": "Konservasi Lingkungan",
-    "created_at": "2024-08-28T16:28:59.590Z",
-    "updated_at": "2024-08-29T10:00:00.000Z"
-  },
-  {
-    "id": "cm0dlf25c00030clh8010f4j2",
-    "name": "Volunteer",
-    "created_at": "2024-08-28T16:28:59.590Z",
-    "updated_at": "2024-08-31T15:45:00.000Z"
-  },
-  {
-    "id": "cm0dlf25c00040clhh8gefdxl",
-    "name": "Budaya",
-    "created_at": "2024-08-28T16:28:59.590Z",
-    "updated_at": "2024-09-01T09:20:00.000Z"
-  },
-  {
-    "id": "cm0dlf25c00050clhdows14p0",
-    "name": "Olahraga",
-    "created_at": "2024-08-28T16:28:59.590Z",
-    "updated_at": "2024-09-02T11:10:00.000Z"
-  },
-  {
-    "id": "cm0dlf25d00060clhhdkp0ygr",
-    "name": "Kuliner",
-    "created_at": "2024-08-28T16:28:59.590Z",
-    "updated_at": "2024-09-03T14:55:00.000Z"
-  },
-  {
-    "id": "cm0dlf25d00070clh06qo2seg",
-    "name": "Pengabdian Masyarakat",
-    "created_at": "2024-08-28T16:28:59.590Z",
-    "updated_at": "2024-09-04T16:30:00.000Z"
-  },
-  {
-    "id": "cm0dlf25d00080clha1pl1iy5",
-    "name": "Kesejahteraan Hewan",
-    "created_at": "2024-08-28T16:28:59.590Z",
-    "updated_at": "2024-09-05T13:25:00.000Z"
-  },
-  {
-    "id": "cm0dlf25d00090clh18jm0hc8",
-    "name": "HAM",
-    "created_at": "2024-08-28T16:28:59.590Z",
-    "updated_at": "2024-09-06T08:15:00.000Z"
-  },
-  {
-    "id": "cm0dlf25d000a0clh6ci12vup",
-    "name": "Pertolongan Bencana",
-    "created_at": "2024-08-28T16:28:59.590Z",
-    "updated_at": "2024-09-07T17:50:00.000Z"
-  },
-  {
-    "id": "cm0dlf25dff0Z0clh6ci12vup",
-    "name": "Kompetisi",
-    "created_at": "2024-08-28T16:28:59.590Z",
-    "updated_at": "2024-09-07T17:50:00.000Z"
-  },
-  {
-    "id": "cm4dlz25dpp0L0clk6ci12vUp",
-    "name": "Workshop",
-    "created_at": "2024-08-28T16:28:59.590Z",
-    "updated_at": "2024-09-07T17:50:00.000Z"
-  },
-  {
-    "id": "cm4dlz25dppZTZclk6ci12vUp",
-    "name": "Meetup",
-    "created_at": "2024-08-28T16:28:59.590Z",
-    "updated_at": "2024-09-07T17:50:00.000Z"
+    "id": "ck9x3sl7v000002nqjc4pqvth",
+    "name": "umum"
   }
 ]

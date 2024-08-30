@@ -13,7 +13,12 @@ const finduserbyid = async (user_id) => {
     include: {
       user_events: {
         include: {
-          events: true,
+          events: {
+            include: {
+              tags: true,
+              channels: true,
+            },
+          },
         },
         take: 3,
       },
