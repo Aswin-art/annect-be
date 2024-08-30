@@ -27,7 +27,7 @@ const countall = async () => {
       users: true,
     },
     orderBy: {
-      created_at: "desc", // Mengurutkan berdasarkan kolom 'createdAt' secara descending
+      created_at: "desc",
     },
     take: 5,
   });
@@ -37,10 +37,14 @@ const countall = async () => {
       events: true,
     },
   });
-  const tagsWithEventCount = {};
+  const tagsWithEventCount = [];
 
   tags.forEach((tag) => {
-    tagsWithEventCount[tag.name] = tag.events.length;
+    const tagData = {
+      name: tag.name,
+      totalData: tag.events.length,
+    };
+    tagsWithEventCount.push(tagData);
   });
 
   return {
