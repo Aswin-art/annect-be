@@ -9,16 +9,60 @@ const router = Router();
 
 router.get("/", async (req, res) => {
   try {
-    const name = req.query.name;
-    let event;
+    // Ambil parameter query dari URL
+    const name = req.query.name || null;
+    const is_paid = req.query.is_paid
+      ? req.query.is_paid === "true"
+      : undefined;
+    const tags = req.query.tags ? req.query.tags.split(",") : [];
+    const categories = req.query.categories
+      ? req.query.categories.split(",")
+      : [];
+
+    // Membuat objek filter berdasarkan parameter yang diterima
+    const filter = {
+      where: {},
+      include: {
+        channels: true,
+        tags: tags.length > 0 ? { where: { id: { in: tags } } } : true,
+        categories:
+          categories.length > 0 ? { where: { id: { in: categories } } } : true,
+        user_events: {
+          select: {
+            users: true,
+          },
+        },
+      },
+    };
+
     if (name) {
-      event = await getAllEvents(name);
-    } else {
-      event = await getAllEvents();
+      filter.where.name = {
+        contains: name,
+      };
     }
-    // const allEvents = await getAllEvents();
-    res.send(event);
+
+    if (is_paid !== undefined) {
+      filter.where.is_paid = is_paid;
+    }
+
+    if (tags.length > 0) {
+      filter.where.tag_id = {
+        in: tags,
+      };
+    }
+
+    if (categories.length > 0) {
+      filter.where.category_id = {
+        in: categories,
+      };
+    }
+
+    // Panggil fungsi repository dengan filter yang sudah dibangun
+    const events = await getAllEvents(filter);
+
+    res.send(events);
   } catch (error) {
+    console.error("Error retrieving events:", error.message);
     res.status(400).send(error.message);
   }
 });

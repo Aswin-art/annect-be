@@ -1,23 +1,8 @@
 const prisma = require("../db/index");
 
-const getAll = (name) =>
-  prisma.events.findMany({
-    where: {
-      name: {
-        contains: name,
-      },
-    },
-    include: {
-      tags: true,
-      categories: true,
-      user_events: {
-        select: {
-          users: true,
-        },
-      },
-      channels: true,
-    },
-  });
+const getAll = (filter) => {
+  return prisma.events.findMany(filter);
+};
 
 const getById = (eventId) =>
   prisma.events.findFirst({

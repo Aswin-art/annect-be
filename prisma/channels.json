@@ -1,13 +1,23 @@
 [
   {
+    "id": "ck9wz8q7v000001mqcn64htz8",
+    "user_id": "user_2kyN7GxSTQcjdJTq8vRG4RkzW8F",
+    "name": "Tech Talks",
+    "description": "Channel diskusi tentang the latest in technology.",
+    "image": "https://loremflickr.com/1200/600/mountain",
+    "nik": "3646565633",
+    "no_rek": "3646565633",
+    "phone": "00112233"
+  },
+  {
     "id": "ck9x1rs8v000002mqcn64htza",
     "user_id": "user_3klL7HyUBVdnmKPz9jFD5SxZ1KX",
     "name": "Code Masters",
     "description": "Channel untuk berbagi tips dan trik coding.",
     "image": "https://loremflickr.com/1200/600/code",
     "nik": "3646565634",
-    "phone": "08123456789",
-    "no_rek": "3646565634"
+    "no_rek": "3646565634",
+    "phone": "00112233"
   },
   {
     "id": "ck9x2rs9v000003mqcn64htzb",
@@ -16,8 +26,8 @@
     "description": "Channel diskusi tentang energi terbarukan.",
     "image": "https://loremflickr.com/1200/600/energy",
     "nik": "3646565635",
-    "phone": "08123456789",
-    "no_rek": "3646565635"
+    "no_rek": "3646565635",
+    "phone": "00112233"
   },
   {
     "id": "ck9x3rs0v000004mqcn64htzc",
@@ -26,8 +36,8 @@
     "description": "Channel untuk diskusi tentang strategi pemasaran digital.",
     "image": "https://loremflickr.com/1200/600/marketing",
     "nik": "3646565636",
-    "phone": "08123456789",
-    "no_rek": "3646565636"
+    "no_rek": "3646565636",
+    "phone": "00112233"
   },
   {
     "id": "ck9x4rs1v000005mqcn64htzd",
@@ -36,57 +46,37 @@
     "description": "Channel yang membahas perkembangan terbaru dalam AI.",
     "image": "https://loremflickr.com/1200/600/ai",
     "nik": "3646565637",
-    "phone": "08123456789",
-    "no_rek": "3646565637"
+    "no_rek": "3646565637",
+    "phone": "00112233"
   },
   {
-    "id": "ck9x5rs2v000006mqcn64htze",
-    "user_id": "user_2kyN7GxSTQcjdJTq8vRG4RkzW8F",
-    "name": "Cloud Computing",
-    "description": "Channel untuk berbagi pengetahuan tentang cloud computing.",
-    "image": "https://loremflickr.com/1200/600/cloud",
-    "nik": "3646565638",
-    "phone": "08123456789",
-    "no_rek": "3646565638"
-  },
-  {
-    "id": "ck9x6rs3v000007mqcn64htzf",
-    "user_id": "user_3klL7HyUBVdnmKPz9jFD5SxZ1KX",
-    "name": "Cybersecurity",
-    "description": "Channel diskusi tentang keamanan dunia maya.",
-    "image": "https://loremflickr.com/1200/600/security",
-    "nik": "3646565639",
-    "phone": "08123456789",
-    "no_rek": "3646565639"
-  },
-  {
-    "id": "ck9x7rs4v000008mqcn64htzg",
-    "user_id": "user_4mnO9IjVWCemqLPz0gHY7UvA2KL",
-    "name": "Web Development",
-    "description": "Channel untuk belajar dan berbagi tentang pengembangan web.",
-    "image": "https://loremflickr.com/1200/600/webdev",
-    "nik": "3646565640",
-    "phone": "08123456789",
-    "no_rek": "3646565640"
-  },
-  {
-    "id": "ck9x8rs5v000009mqcn64htzh",
-    "user_id": "user_5opQ1KlXDFngrQRz1hIJ8WxB3MO",
-    "name": "Data Science",
-    "description": "Channel untuk membahas ilmu data dan analisis.",
-    "image": "https://loremflickr.com/1200/600/datascience",
-    "nik": "3646565641",
-    "phone": "08123456789",
-    "no_rek": "3646565641"
-  },
-  {
-    "id": "ck9x9rs6v000010mqcn64htzi",
+    "id": "ck9x4rs1v000005mqcn69htzd",
     "user_id": "user_6qrS3MpYZHosoTRz2kKL9AyC4PQ",
-    "name": "Startup Hub",
-    "description": "Channel diskusi untuk para pelaku startup.",
-    "image": "https://loremflickr.com/1200/600/startup",
-    "nik": "3646565642",
-    "phone": "08123456789",
-    "no_rek": "3646565642"
+    "name": "ComHaton",
+    "description": "Channel yang membahas kompetisi dan hackathon.",
+    "image": "https://loremflickr.com/1200/600/hackathon",
+    "nik": "3646565637",
+    "no_rek": "3646565637",
+    "phone": "00112233"
+  },
+  {
+    "id": "ck9x4rs1v666665mqcn69htzd",
+    "user_id": "user_5opQ1KlXDFngrQRz1hIJ8WxB3MO",
+    "name": "ScholarShipper",
+    "description": "Channel yang membahas info terbaru tentang beasiswa dalam negeri dan luar negeri.",
+    "image": "https://loremflickr.com/1200/600/scholarship",
+    "nik": "3646565637",
+    "no_rek": "3646565637",
+    "phone": "00112233"
+  },
+  {
+    "id": "ck9x4rs14587625mqcn69htzd",
+    "user_id": "user_4mnO9IjVWCemqLPz0gHY7UvA2KL",
+    "name": "SimpBinar",
+    "description": "Channel yang membahas info seminar, konferensi, dan webinar",
+    "image": "https://loremflickr.com/1200/600/conference",
+    "nik": "3646565637",
+    "no_rek": "3646565637",
+    "phone": "00112233"
   }
 ]

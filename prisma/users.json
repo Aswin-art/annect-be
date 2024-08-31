@@ -4,34 +4,44 @@
     "name": "Aswinnn",
     "email": "aswinarung1@gmail.com",
     "image": "https://ui-avatars.com/api/?background=random&name=Azwim+Arr",
-    "role": "USER"
+    "role": "USER",
+    "created_at": "2024-08-28T02:53:20.000Z",
+    "updated_at": "2024-08-28T02:53:20.000Z"
   },
   {
     "id": "user_3klL7HyUBVdnmKPz9jFD5SxZ1KX",
     "name": "JohnDoe",
     "email": "johndoe@gmail.com",
     "image": "https://ui-avatars.com/api/?background=random&name=John+Doe",
-    "role": "USER"
+    "role": "USER",
+    "created_at": "2024-08-29T04:10:15.000Z",
+    "updated_at": "2024-08-29T04:10:15.000Z"
   },
   {
     "id": "user_4mnO9IjVWCemqLPz0gHY7UvA2KL",
     "name": "JaneSmith",
     "email": "janesmith@gmail.com",
     "image": "https://ui-avatars.com/api/?background=random&name=Jane+Smith",
-    "role": "ADMIN"
+    "role": "ADMIN",
+    "created_at": "2024-08-30T05:20:30.000Z",
+    "updated_at": "2024-08-30T05:20:30.000Z"
   },
   {
     "id": "user_5opQ1KlXDFngrQRz1hIJ8WxB3MO",
     "name": "EmilyJones",
     "email": "emilyjones@gmail.com",
     "image": "https://ui-avatars.com/api/?background=random&name=Emily+Jones",
-    "role": "USER"
+    "role": "USER",
+    "created_at": "2024-08-31T06:25:45.000Z",
+    "updated_at": "2024-08-31T06:25:45.000Z"
   },
   {
     "id": "user_6qrS3MpYZHosoTRz2kKL9AyC4PQ",
     "name": "Volodymyr Zelenskyy",
     "email": "michaelbrown@gmail.com",
     "image": "https://ui-avatars.com/api/?background=random&name=Volodymyr+Zelenskyy",
-    "role": "USER"
+    "role": "USER",
+    "created_at": "2024-09-01T07:35:55.000Z",
+    "updated_at": "2024-09-01T07:35:55.000Z"
   }
 ]
