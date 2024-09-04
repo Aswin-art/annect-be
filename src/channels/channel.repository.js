@@ -5,6 +5,11 @@ const findall = async (name, user_id) => {
   const ch = await prisma.channels.findMany({
     include: {
       users: true,
+      _count:{
+        select:{
+          events:true
+        }
+      }
     },
     where: {
       NOT: {
