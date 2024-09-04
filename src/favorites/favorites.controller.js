@@ -4,7 +4,7 @@ const {
   deleteFavorite,
   insertUserFavorite,
 } = require("./favorites.service");
-const favoriteInsertSchema = require("../schema/favorite.ts");
+const favoriteInsertSchema = require("../schema/favorite");
 const { fromError } = require('zod-validation-error');
 const { ZodError } = require("zod");
 const router = Router();
