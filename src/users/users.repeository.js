@@ -39,7 +39,21 @@ const finduserbyid = async (user_id) => {
   return user;
 };
 
+const findHistoryEvent = async (user_id) => {
+  const user = await prisma.user_events.findMany({
+    where: {
+      user_id,
+    },
+    include: {
+      events: true,
+    },
+  });
+
+  return user;
+};
+
 module.exports = {
   findallusers,
   finduserbyid,
+  findHistoryEvent,
 };
