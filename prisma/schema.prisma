@@ -45,7 +45,6 @@ model events {
   tf_image      String?        @db.VarChar(255)
   location      String?        @db.VarChar(255)
   link_group    String         @db.VarChar(255)
-  channel_link  String         @db.VarChar(255)
   is_paid       Boolean?       @default(false)
   is_online     Boolean?       @default(true)
   price         Float?
