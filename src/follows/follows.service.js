@@ -3,6 +3,7 @@ const {
   findallchannelfollowersbyid,
   insert,
   deleteid,
+  findall,
 } = require("./follows.repository");
 const { getbyid } = require("../channels/channels.service");
 
@@ -31,7 +32,7 @@ const create = async (followdata, id) => {
     throw new Error("Channel not found");
   }
 
-  const existingFollow = await checkIfFollowExists(followdata.user_id, followdata.channel_id,);
+  const existingFollow = await findall(followdata.user_id, followdata.channel_id,);
   
   if (existingFollow) {
     await deleteid(id);
