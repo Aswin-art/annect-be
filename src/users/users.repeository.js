@@ -56,7 +56,12 @@ const findHistoryEvent = async (user_id) => {
       user_id,
     },
     include: {
-      events: true,
+      events: {
+        include: {
+          tags: true,
+          categories: true,
+        },
+      },
     },
   });
 
