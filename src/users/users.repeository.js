@@ -17,6 +17,7 @@ const finduserbyid = async (user_id) => {
             include: {
               tags: true,
               channels: true,
+              categories: true,
             },
           },
         },
@@ -25,12 +26,22 @@ const finduserbyid = async (user_id) => {
       channels: {
         include: {
           users: true,
+          _count: {
+            select: {
+              events: true,
+            },
+          },
         },
         take: 3,
       },
       favorites: {
         include: {
-          events: true,
+          events: {
+            include: {
+              tags: true,
+              categories: true,
+            },
+          },
         },
         take: 3,
       },
