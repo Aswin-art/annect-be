@@ -5,11 +5,11 @@ const findall = async (name, user_id) => {
   const ch = await prisma.channels.findMany({
     include: {
       users: true,
-      _count:{
-        select:{
-          events:true
-        }
-      }
+      _count: {
+        select: {
+          events: true,
+        },
+      },
     },
     where: {
       NOT: {
@@ -25,13 +25,13 @@ const findall = async (name, user_id) => {
 
     // Cek apakah `followers` terdefinisi dan bukan null
     if (channel.followers && channel.followers.length > 0 && user_id != null) {
-        channel.followers.forEach((follower) => {
-            if (follower.user_id == user_id) {
-                channel.is_following = true;
-            }
-        });
+      channel.followers.forEach((follower) => {
+        if (follower.user_id == user_id) {
+          channel.is_following = true;
+        }
+      });
     }
-});
+  });
   return ch;
 };
 
@@ -57,6 +57,17 @@ const findchannelbyiduser = async (user_id) => {
       _count: true,
     },
   });
+  if (ch) {
+    ch.is_following = false;
+
+    if (ch.followers && ch.followers.length > 0 && user_id != null) {
+      ch.followers.forEach((follower) => {
+        if (follower.user_id == user_id) {
+          ch.is_following = true;
+        }
+      });
+    }
+  }
   return channel;
 };
 
