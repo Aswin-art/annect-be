@@ -10,13 +10,13 @@ const getById = (user_id) =>
     },
   });
 
-const updateStatus = (user_event_id, updated_user_event_status) =>
+const updateStatus = (updated_user_event_status) =>
   prisma.user_events.update({
     where: {
-      id: user_event_id,
+      id: updated_user_event_status.user_id,
     },
     data: {
-      status: updated_user_event_status,
+      ...updated_user_event_status,
     },
   });
 
