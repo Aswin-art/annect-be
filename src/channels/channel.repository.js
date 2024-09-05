@@ -57,17 +57,6 @@ const findchannelbyiduser = async (user_id) => {
       _count: true,
     },
   });
-  if (ch) {
-    ch.is_following = false;
-
-    if (ch.followers && ch.followers.length > 0 && user_id != null) {
-      ch.followers.forEach((follower) => {
-        if (follower.user_id == user_id) {
-          ch.is_following = true;
-        }
-      });
-    }
-  }
   return channel;
 };
 
@@ -82,6 +71,18 @@ const findbyid = async (id) => {
       events: true,
     },
   });
+  if (ch) {
+    ch.is_following = false;
+
+    // Cek apakah `followers` terdefinisi dan bukan null
+    if (ch.followers && ch.followers.length > 0 && user_id != null) {
+        ch.followers.forEach((follower) => {
+            if (follower.user_id == user_id) {
+                ch.is_following = true;
+            }
+        });
+    }
+}
   return ch;
 };
 
