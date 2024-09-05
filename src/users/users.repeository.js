@@ -13,56 +13,76 @@ const finduserbyid = async (id) => {
     include: {
       user_events: {
         include: {
-          events: true,
+          events: {
+            include: {
+              categories: true,
+              tags: true,
+              channels: true,
+            },
+          },
         },
         take: 3,
       },
-      channels: {
+      follows: {
         include: {
-          users: true,
+          channels: {
+            include: {
+              users: true,
+              _count: {
+                select: {
+                  events: true,
+                },
+              },
+            },
+          },
         },
         take: 3,
       },
       favorites: {
         include: {
-          events: true,
+          events: {
+            include: {
+              categories: true,
+              tags: true,
+            },
+          },
         },
         take: 3,
       },
     },
   });
 
-  const favoriteEventIds = user.favorites.map(favorite => favorite.event_id);
+  // const favoriteEventIds = user.favorites.map((favorite) => favorite.event_id);
 
-  const userEventsWithFavoritesAndJoin = user.user_events.map((userEvent) => {
-    return {
-      ...userEvent,
-      is_Payment: userEvent.status
-    };
-  });
+  // const userEventsWithFavoritesAndJoin = user.user_events.map((userEvent) => {
+  //   return {
+  //     ...userEvent,
+  //     is_Payment: userEvent.status,
+  //   };
+  // });
 
-  const is_following = await prisma.follows.findMany({
-    where: {
-      user_id: id,
-    },
-    select: {
-      channel_id: true,
-    },
-  });
+  // const is_following = await prisma.follows.findMany({
+  //   where: {
+  //     user_id: id,
+  //   },
+  //   select: {
+  //     channel_id: true,
+  //   },
+  // });
 
-  const followingChannelIds = is_following.map(follow => follow.channel_id);
+  // const followingChannelIds = is_following.map((follow) => follow.channel_id);
 
-  const userChannelsWithFollowing = user.channels.map((channel) => {
-    return {
-      ...channel,
-      is_following: followingChannelIds.includes(channel.id),
-    };
-  });
+  // const userChannelsWithFollowing = user.channels.map((channel) => {
+  //   return {
+  //     ...channel,
+  //     is_following: followingChannelIds.includes(channel.id),
+  //   };
+  // });
 
   return {
     ...user,
-    user_events: userEventsWithFavoritesAndJoin,
-    channels: userChannelsWithFollowing,
+    // user_events: userEventsWithFavoritesAndJoin,
+    // channels: userChannelsWithFollowing,
   };
 };
 
