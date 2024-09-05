@@ -56,7 +56,17 @@ const insert = async (followdata) => {
 };
 
 const deleteid = async (id) => {
-  await prisma.follows.delete({
+  const follow = await prisma.follows.findUnique({
+    where: {
+      id: id, 
+    },
+  });
+
+  if (!follow) {
+    throw new Error("Record to delete does not exist.");
+  }
+
+  return await prisma.follows.delete({
     where: {
       id: id,
     },
