@@ -32,8 +32,11 @@ const create = async (followdata, id) => {
     throw new Error("Channel not found");
   }
 
-  const existingFollow = await findall(followdata.user_id, followdata.channel_id,);
-  
+  const existingFollow = await findall(
+    followdata.user_id,
+    followdata.channel_id
+  );
+
   if (existingFollow) {
     await deleteid(id);
   }
