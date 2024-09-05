@@ -20,9 +20,6 @@ const main = async () => {
   await prisma.follows.deleteMany();
   console.log("Truncated table follows...");
 
-  await prisma.chats.deleteMany();
-  console.log("Truncated table chats...");
-
   await prisma.events.deleteMany();
   console.log("Truncated table events...");
 
