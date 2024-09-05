@@ -24,6 +24,9 @@ router.get("/", async (req, res) => {
     // Membuat objek filter berdasarkan parameter yang diterima
     const filter = {
       where: {},
+      orderBy: {
+        updated_at: 'desc',
+      },
       include: {
         channels: true,
         tags: tags.length > 0 ? { where: { id: { in: tags } } } : true,
