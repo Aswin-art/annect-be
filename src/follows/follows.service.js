@@ -3,13 +3,15 @@ const {
   findallchannelfollowersbyid,
   insert,
   deleteid,
+  findall,
+  exist,
 } = require("./follows.repository");
 const { getbyid } = require("../channels/channels.service");
 
-// const getall = async () => {
-//     const follow = await findall();
-//     return follow;
-// }
+const getall = async () => {
+  const follow = await findall();
+  return follow;
+};
 
 const findfollowbyuserid = async (id) => {
   const follow = await findallusersfollowbyid(id);
@@ -31,12 +33,12 @@ const create = async (followdata) => {
     throw new Error("You can't follow your own channel");
   }
 
-  // const existingFollow = await exist(followdata.user_id, followdata.channel_id);
+  const existingFollow = await exist(followdata.user_id, followdata.channel_id);
 
-  // if (existingFollow) {
-  //   await deleteid(existingFollow.id);
-  //   return;
-  // }
+  if (existingFollow) {
+    await deleteid(existingFollow.id);
+    return;
+  }
 
   const follow = await insert(followdata);
 
@@ -52,5 +54,5 @@ module.exports = {
   findfollowbychannelid,
   create,
   deletefollow,
-  // getall,
+  getall,
 };

@@ -3,35 +3,43 @@ const cuid = require("cuid");
 
 const findall = async (name, user_id) => {
   const ch = await prisma.channels.findMany({
-    include: {
-      users: true,
-      _count: {
-        select: {
-          events: true,
-        },
+      where: {
+          NOT: {
+              user_id: user_id
+          },
+          name: {
+              contains: name
+          },
+          status: 'VERIFIED'
       },
-    },
-    where: {
-      NOT: {
-        user_id: user_id,
+      include: {
+          users: true,
+          follows: true, 
+          _count: {
+              select: {
+                  events: true
+              }
+          }
       },
-      name: {
-        contains: name,
-      },
-    },
+      orderBy: {
+          created_at: 'desc' 
+      }
   });
-  ch.forEach((channel) => {
-    channel.is_following = false;
 
-    // Cek apakah `followers` terdefinisi dan bukan null
-    if (channel.followers && channel.followers.length > 0 && user_id != null) {
-      channel.followers.forEach((follower) => {
-        if (follower.user_id == user_id) {
-          channel.is_following = true;
-        }
-      });
-    }
+  
+  ch.forEach((channel) => {
+      channel.is_following = false;
+
+      
+      if (channel.followers && channel.followers.length > 0 && user_id != null) {
+          channel.followers.forEach((follower) => {
+              if (follower.user_id == user_id) {
+                  channel.is_following = true;
+              }
+          });
+      }
   });
+
   return ch;
 };
 

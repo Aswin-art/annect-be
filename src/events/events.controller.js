@@ -12,6 +12,7 @@ router.get("/", async (req, res) => {
     // Ambil parameter query dari URL
     const name = req.query.name || null;
     const user_id = req.query.users || null;
+    const status = req.quer.status || "ONGOING";
     console.log("user_id", user_id);
     const is_paid = req.query.is_paid
       ? req.query.is_paid === "true"
@@ -23,9 +24,11 @@ router.get("/", async (req, res) => {
 
     // Membuat objek filter berdasarkan parameter yang diterima
     const filter = {
-      where: {},
+      where: {
+        status: status
+      },
       orderBy: {
-        updated_at: 'desc',
+        created_at: 'desc' 
       },
       include: {
         channels: true,
