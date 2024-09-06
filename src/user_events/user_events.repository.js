@@ -5,6 +5,9 @@ const findall = async () => {
     include:{
       events:true,
       users:true,
+    },
+    orderBy:{
+      created_at: 'desc'
     }
   })
   return ue;
