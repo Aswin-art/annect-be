@@ -5,30 +5,34 @@ const findallusers = async () => {
   return user;
 };
 
-const finduserbyid = async (user_id) => {
+const finduserbyid = async (id) => {
   const user = await prisma.users.findUnique({
     where: {
-      id: user_id,
+      id: id,
     },
     include: {
       user_events: {
         include: {
           events: {
             include: {
+              categories: true,
               tags: true,
               channels: true,
-              categories: true,
             },
           },
         },
         take: 3,
       },
-      channels: {
+      follows: {
         include: {
-          users: true,
-          _count: {
-            select: {
-              events: true,
+          channels: {
+            include: {
+              users: true,
+              _count: {
+                select: {
+                  events: true,
+                },
+              },
             },
           },
         },
@@ -38,8 +42,8 @@ const finduserbyid = async (user_id) => {
         include: {
           events: {
             include: {
-              tags: true,
               categories: true,
+              tags: true,
             },
           },
         },
@@ -47,7 +51,39 @@ const finduserbyid = async (user_id) => {
       },
     },
   });
-  return user;
+
+  // const favoriteEventIds = user.favorites.map((favorite) => favorite.event_id);
+
+  // const userEventsWithFavoritesAndJoin = user.user_events.map((userEvent) => {
+  //   return {
+  //     ...userEvent,
+  //     is_Payment: userEvent.status,
+  //   };
+  // });
+
+  // const is_following = await prisma.follows.findMany({
+  //   where: {
+  //     user_id: id,
+  //   },
+  //   select: {
+  //     channel_id: true,
+  //   },
+  // });
+
+  // const followingChannelIds = is_following.map((follow) => follow.channel_id);
+
+  // const userChannelsWithFollowing = user.channels.map((channel) => {
+  //   return {
+  //     ...channel,
+  //     is_following: followingChannelIds.includes(channel.id),
+  //   };
+  // });
+
+  return {
+    ...user,
+    // user_events: userEventsWithFavoritesAndJoin,
+    // channels: userChannelsWithFollowing,
+  };
 };
 
 const findHistoryEvent = async (user_id) => {
@@ -56,7 +92,12 @@ const findHistoryEvent = async (user_id) => {
       user_id,
     },
     include: {
-      events: true,
+      events: {
+        include: {
+          tags: true,
+          categories: true,
+        },
+      },
     },
   });
 

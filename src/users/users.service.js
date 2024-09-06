@@ -18,11 +18,11 @@ const getbyid = async (id) => {
 };
 
 const getHistoryEvent = async (id) => {
-  const user = await findHistoryEvent(id);
-  if (!user) {
+  const histories = await findHistoryEvent(id);
+  if (!histories) {
     throw new Error("id users not found");
   }
-  return user;
+  return histories;
 };
 
 module.exports = {

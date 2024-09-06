@@ -1,14 +1,20 @@
-const { getAll, deleteById, insert, getById } = require("./favorites.repository");
+const {
+  getAll,
+  deleteById,
+  insert,
+  getById,
+} = require("./favorites.repository");
 const { getbyid } = require("../users/users.service");
 
 const getAllUserFavorites = async (user_id) => {
-  await getbyid(user_id); // Check if user exists
+  const user = await getbyid(user_id);
+  if (!user) return null;
   return getAll(user_id);
 };
 
 const insertUserFavorite = async (favoriteData) => {
   const [exist] = await getById(favoriteData.user_id, favoriteData.event_id);
-  
+
   if (!exist) {
     return insert(favoriteData);
   } else {
