@@ -3,41 +3,39 @@ const cuid = require("cuid");
 
 const findall = async (name, user_id) => {
   const ch = await prisma.channels.findMany({
-      where: {
-          NOT: {
-              user_id: user_id
-          },
-          name: {
-              contains: name
-          },
-          status: 'VERIFIED'
+    where: {
+      NOT: {
+        user_id: user_id,
       },
-      include: {
-          users: true,
-          follows: true, 
-          _count: {
-              select: {
-                  events: true
-              }
-          }
+      name: {
+        contains: name,
       },
-      orderBy: {
-          created_at: 'desc' 
-      }
+      status: "VERIFIED",
+    },
+    include: {
+      users: true,
+      follows: true,
+      _count: {
+        select: {
+          events: true,
+        },
+      },
+    },
+    orderBy: {
+      created_at: "desc",
+    },
   });
 
-  
   ch.forEach((channel) => {
-      channel.is_following = false;
+    channel.is_following = false;
 
-      
-      if (channel.followers && channel.followers.length > 0 && user_id != null) {
-          channel.followers.forEach((follower) => {
-              if (follower.user_id == user_id) {
-                  channel.is_following = true;
-              }
-          });
-      }
+    if (channel.followers && channel.followers.length > 0 && user_id != null) {
+      channel.followers.forEach((follower) => {
+        if (follower.user_id == user_id) {
+          channel.is_following = true;
+        }
+      });
+    }
   });
 
   return ch;
@@ -68,7 +66,7 @@ const findchannelbyiduser = async (user_id) => {
   return channel;
 };
 
-const findbyid = async (id) => {
+const findbyid = async (id, user_id) => {
   const ch = await prisma.channels.findUnique({
     where: {
       id: id,
@@ -84,17 +82,19 @@ const findbyid = async (id) => {
       },
     },
   });
-  // if (ch) {
-  //   ch.is_following = false;
 
-  //   if (ch.followers && ch.followers.length > 0 && user_id != null) {
-  //     ch.followers.forEach((follower) => {
-  //       if (follower.user_id == user_id) {
-  //         ch.is_following = true;
-  //       }
-  //     });
-  //   }
-  // }
+  if (ch) {
+    ch.is_following = false;
+
+    if (ch.follows && ch.follows.length > 0 && user_id != null) {
+      ch.follows.forEach((follow) => {
+        if (follow.user_id == user_id) {
+          ch.is_following = true;
+        }
+      });
+    }
+  }
+
   return ch;
 };
 
