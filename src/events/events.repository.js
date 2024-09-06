@@ -17,6 +17,7 @@ const getDetail = (eventId) =>
       id: eventId,
     },
     include: {
+      favorites: true,
       channels: true,
       tags: true,
       categories: true,
