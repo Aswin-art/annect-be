@@ -6,7 +6,13 @@ const getAll = async (user_id) =>
       user_id: user_id,
     },
     include: {
-      events: true,
+      events: {
+        include: {
+          categories: true,
+          channels: true,
+          tags: true,
+        },
+      },
     },
   });
 
@@ -17,14 +23,22 @@ const insert = (favoriteData) =>
     },
   });
 
-const getById = (user_id, event_id) => (
+const getUserFavorite = (user_id, event_id) => {
+  prisma.favorites.findFirst({
+    where: {
+      event_id,
+      user_id,
+    },
+  });
+};
+
+const getById = (user_id, event_id) =>
   prisma.favorites.findMany({
     where: {
       user_id: user_id,
-      event_id: event_id
-    }
-  })
-)
+      event_id: event_id,
+    },
+  });
 
 const deleteById = (favorite_id) =>
   prisma.favorites.delete({
@@ -38,4 +52,5 @@ module.exports = {
   deleteById,
   insert,
   getById,
+  getUserFavorite,
 };

@@ -1,4 +1,9 @@
-const { getUserEventById, inserUserEvent, updateUserEventStatus, getall } = require("./user_events.service");
+const {
+  getUserEventById,
+  inserUserEvent,
+  updateUserEventStatus,
+  getall,
+} = require("./user_events.service");
 const { ZodError } = require("zod");
 const { fromZodError } = require("zod-validation-error");
 const { Router } = require("express");
@@ -6,7 +11,7 @@ const router = Router();
 
 router.get("/", async (req, res) => {
   try {
-    const ue= await getall();
+    const ue = await getall();
     res.send(ue);
   } catch (error) {
     res.status(400).send(error.message);
@@ -29,7 +34,7 @@ router.post("/update", async (req, res) => {
     res.status(201).send("success");
   } catch (error) {
     if (error instanceof ZodError) {
-      return res.status(400).send({ message: fromZodError(error).toString()});
+      return res.status(400).send({ message: fromZodError(error).toString() });
     }
     res.status(500).send(error.message);
   }
@@ -41,7 +46,7 @@ router.post("/", async (req, res) => {
     res.status(201).send("success");
   } catch (error) {
     if (error instanceof ZodError) {
-      return res.status(400).send({ message: fromZodError(error).toString()});
+      return res.status(400).send({ message: fromZodError(error).toString() });
     }
     res.status(500).send(error.message);
   }

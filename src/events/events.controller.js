@@ -25,10 +25,10 @@ router.get("/", async (req, res) => {
     // Membuat objek filter berdasarkan parameter yang diterima
     const filter = {
       where: {
-        status: status
+        status: status,
       },
       orderBy: {
-        created_at: 'desc' 
+        created_at: "desc",
       },
       include: {
         channels: true,
