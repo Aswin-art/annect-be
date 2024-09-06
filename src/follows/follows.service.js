@@ -21,12 +21,8 @@ const findfollowbychannelid = async (id) => {
   return follow;
 };
 
-const create = async (followdata, id) => {
-  if (id === followdata.user_id) {
-    throw new Error("You can't follow your own channel");
-  }
-
-  const channel = await getbyid(id);
+const create = async (followdata) => {
+  const channel = await getbyid(followdata.id);
 
   if (!channel) {
     throw new Error("Channel not found");
