@@ -12,7 +12,7 @@ router.get("/", async (req, res) => {
     // Ambil parameter query dari URL
     const name = req.query.name || null;
     const user_id = req.query.users || null;
-    const status = req.quer.status || "ONGOING";
+    const status = req.query.status || "ONGOING";
     console.log("user_id", user_id);
     const is_paid = req.query.is_paid
       ? req.query.is_paid === "true"
