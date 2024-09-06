@@ -99,7 +99,7 @@ router.post("/:event_id", async (req, res) => {
 router.get("/:event_id", async (req, res) => {
   try {
     const { event_id } = req.params;
-    const user_id = req.body.user_id || null;
+    const user_id = req.query.user_id || null;
     const eventDetail = await getEventDetail(event_id, user_id);
     res.send(eventDetail);
   } catch (error) {
