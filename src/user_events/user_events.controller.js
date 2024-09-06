@@ -2,11 +2,21 @@ const {
   getUserEventById,
   inserUserEvent,
   updateUserEventStatus,
+  getall,
 } = require("./user_events.service");
 const { ZodError } = require("zod");
 const { fromZodError } = require("zod-validation-error");
 const { Router } = require("express");
 const router = Router();
+
+router.get("/", async (req, res) => {
+  try {
+    const ue = await getall();
+    res.send(ue);
+  } catch (error) {
+    res.status(400).send(error.message);
+  }
+});
 
 router.get("/:user_id", async (req, res) => {
   try {
