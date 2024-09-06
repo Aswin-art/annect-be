@@ -1,9 +1,16 @@
-const { getById, insert, updateStatus, findall } = require("./user_events.repository");
+const {
+  getById,
+  insert,
+  updateStatus,
+  findall,
+} = require("./user_events.repository");
 const userEventsInsertSchema = require("../schema/userEvents");
 
 const getUserEventById = (user_id) => getById(user_id);
 
-const updateUserEventStatus = (updated_user_event_status) => updateStatus(updated_user_event_status);
+const updateUserEventStatus = (updated_user_event_status) => {
+  return updateStatus(updated_user_event_status);
+};
 
 const inserUserEvent = (user_event_data) => {
   userEventsInsertSchema.parse(user_event_data);
@@ -14,11 +21,11 @@ const inserUserEvent = (user_event_data) => {
 const getall = async () => {
   const ue = await findall();
   return ue;
-}
+};
 
 module.exports = {
   getUserEventById,
   inserUserEvent,
   updateUserEventStatus,
-  getall
+  getall,
 };

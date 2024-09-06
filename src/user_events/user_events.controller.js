@@ -30,8 +30,8 @@ router.get("/:user_id", async (req, res) => {
 
 router.post("/update", async (req, res) => {
   try {
-    await updateUserEventStatus(req.body);
-    res.status(201).send("success");
+    const response = await updateUserEventStatus(req.body);
+    res.status(201).send(response);
   } catch (error) {
     if (error instanceof ZodError) {
       return res.status(400).send({ message: fromZodError(error).toString() });
