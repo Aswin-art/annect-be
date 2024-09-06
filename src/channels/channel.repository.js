@@ -68,29 +68,30 @@ const findchannelbyiduser = async (user_id) => {
   return channel;
 };
 
-const findbyid = async (id) => {
+const findbyid = async (id, user_id) => {
   const ch = await prisma.channels.findUnique({
-    where: {
-      id: id,
-    },
-    include: {
-      users: true,
-      follows: true,
-      events: true,
-    },
+      where: {
+          id: id,
+      },
+      include: {
+          users: true,
+          follows: true,
+          events: true,
+      },
   });
-  if (ch) {
-    ch.is_following = false;
 
-    // Cek apakah `followers` terdefinisi dan bukan null
-    if (ch.followers && ch.followers.length > 0 && user_id != null) {
-        ch.followers.forEach((follower) => {
-            if (follower.user_id == user_id) {
-                ch.is_following = true;
-            }
-        });
-    }
-}
+  if (ch) {
+      ch.is_following = false;
+
+      if (ch.follows && ch.follows.length > 0 && user_id != null) {
+          ch.follows.forEach((follow) => {
+              if (follow.user_id == user_id) {
+                  ch.is_following = true;
+              }
+          });
+      }
+  }
+  
   return ch;
 };
 
