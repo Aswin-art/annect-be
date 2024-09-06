@@ -29,7 +29,11 @@ const getEventDetail = async (event_id, user_id) => {
     );
   }
 
-  const similarEvent = await getSimilar(id, tag_id, channel_id);
+  const similarEvent = await getSimilar(
+    eventDetail.id,
+    eventDetail.tag_id,
+    eventDetail.channel_id
+  );
   eventDetail.similar_event = similarEvent;
   return eventDetail;
 };
