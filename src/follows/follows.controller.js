@@ -42,6 +42,7 @@ router.get("/channels/:id/followers", async (req, res) => {
 router.post("/follow/channels", async (req, res) => {
   try {
     const followdata = req.body;
+    console.log("Data follow:", followdata);
 
     const fl = await create(followdata);
     res.status(201).send(fl);

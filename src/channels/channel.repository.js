@@ -29,8 +29,8 @@ const findall = async (name, user_id) => {
   ch.forEach((channel) => {
     channel.is_following = false;
 
-    if (channel.followers && channel.followers.length > 0 && user_id != null) {
-      channel.followers.forEach((follower) => {
+    if (channel.follows && channel.follows.length > 0 && user_id != null) {
+      channel.follows.forEach((follower) => {
         if (follower.user_id == user_id) {
           channel.is_following = true;
         }
@@ -74,12 +74,7 @@ const findbyid = async (id, user_id) => {
     include: {
       users: true,
       follows: true,
-      events: {
-        include: {
-          tags: true,
-          categories: true,
-        },
-      },
+      events: true,
     },
   });
 
@@ -87,11 +82,7 @@ const findbyid = async (id, user_id) => {
     ch.is_following = false;
 
     if (ch.follows && ch.follows.length > 0 && user_id != null) {
-      ch.follows.forEach((follow) => {
-        if (follow.user_id == user_id) {
-          ch.is_following = true;
-        }
-      });
+      ch.is_following = ch.follows.some((follow) => follow.user_id === user_id);
     }
   }
 

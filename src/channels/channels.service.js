@@ -16,13 +16,14 @@ const getchannnelbyiduser = async (user_id) => {
   return channel;
 };
 
-const getbyid = async (id) => {
-  const ch = await findbyid(id);
-  if (!ch) {
-    throw new Error("channel id not found");
+const getbyid = async (id, user_id) => {
+  const ch = await findbyid(id, user_id);
+  if(!ch){
+      throw new Error("channel id not found");
+      
   }
   return ch;
-};
+}
 
 const create = async (channelsdata) => {
   const ch = await insert(channelsdata);
