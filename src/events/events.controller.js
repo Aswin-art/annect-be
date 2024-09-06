@@ -25,7 +25,7 @@ router.get("/", async (req, res) => {
     const filter = {
       where: {},
       orderBy: {
-        updated_at: 'desc',
+        created_at: 'desc' 
       },
       include: {
         channels: true,
