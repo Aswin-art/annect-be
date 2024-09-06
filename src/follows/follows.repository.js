@@ -45,6 +45,8 @@ const findallchannelfollowersbyid = async (channel_id) => {
   return follow;
 };
 
+
+
 const insert = async (followdata) => {
   const fl = await prisma.follows.create({
     data: {
@@ -54,6 +56,16 @@ const insert = async (followdata) => {
   });
   return fl;
 };
+
+const exist = async (user_id, channel_id) => {
+  const follow = await prisma.follows.findFirst({
+    where:{
+      user_id:user_id,
+      channel_id: channel_id
+    }
+  })
+  return follow;
+}
 
 const deleteid = async (id) => {
   const follow = await prisma.follows.findUnique({
@@ -79,6 +91,7 @@ module.exports = {
   insert,
   deleteid,
   findall,
+  exist
 };
 
 // const channel = await prisma.channels.findUnique({
