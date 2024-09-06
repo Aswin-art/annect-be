@@ -43,7 +43,7 @@ router.post("/update", async (req, res) => {
 router.post("/", async (req, res) => {
   try {
     await inserUserEvent(req.body);
-    res.status(201).send("success");
+    res.status(201).send({ message: "success" });
   } catch (error) {
     if (error instanceof ZodError) {
       return res.status(400).send({ message: fromZodError(error).toString() });

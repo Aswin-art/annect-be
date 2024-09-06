@@ -2,16 +2,16 @@ const prisma = require("../db/index");
 
 const findall = async () => {
   const ue = await prisma.user_events.findMany({
-    include:{
-      events:true,
-      users:true,
+    include: {
+      events: true,
+      users: true,
     },
-    orderBy:{
-      created_at: 'desc'
-    }
-  })
+    orderBy: {
+      created_at: "desc",
+    },
+  });
   return ue;
-}
+};
 
 const getById = (user_id) =>
   prisma.user_events.findUnique({
@@ -33,12 +33,12 @@ const updateStatus = (updated_user_event_status) =>
     },
   });
 
-const insert = (user_id, event_id) =>
+const insert = (user_id, event_id, status) =>
   prisma.user_events.create({
     data: {
       user_id: user_id,
       event_id: event_id,
-      status: false,
+      status: status,
     },
   });
 
@@ -46,5 +46,5 @@ module.exports = {
   getById,
   insert,
   updateStatus,
-  findall
+  findall,
 };

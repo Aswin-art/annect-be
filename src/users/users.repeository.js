@@ -21,6 +21,9 @@ const finduserbyid = async (id) => {
             },
           },
         },
+        orderBy: {
+          created_at: "desc",
+        },
         take: 3,
       },
       follows: {
@@ -36,6 +39,9 @@ const finduserbyid = async (id) => {
             },
           },
         },
+        orderBy: {
+          created_at: "desc",
+        },
         take: 3,
       },
       favorites: {
@@ -46,6 +52,9 @@ const finduserbyid = async (id) => {
               tags: true,
             },
           },
+        },
+        orderBy: {
+          created_at: "desc",
         },
         take: 3,
       },
