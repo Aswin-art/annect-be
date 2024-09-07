@@ -10,7 +10,6 @@ const findall = async (name, user_id) => {
       name: {
         contains: name,
       },
-      status: "VERIFIED",
     },
     include: {
       users: true,
