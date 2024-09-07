@@ -37,7 +37,7 @@ const create = async (followdata) => {
 
   if (existingFollow) {
     await deleteid(existingFollow.id);
-    return;
+    return true;
   }
 
   const follow = await insert(followdata);
