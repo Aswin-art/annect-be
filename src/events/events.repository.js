@@ -73,6 +73,17 @@ const updateById = (eventData, eventId) =>
     },
   });
 
+const updatePaymentImage = async (eventId, paymentImage) => {
+  await prisma.events.update({
+    where: {
+      id: eventId,
+    },
+    data: {
+      tf_image: paymentImage,
+    },
+  });
+};
+
 module.exports = {
   getAll,
   updateById,
@@ -80,4 +91,5 @@ module.exports = {
   getById,
   getDetail,
   getSimilar,
+  updatePaymentImage,
 };

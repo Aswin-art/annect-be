@@ -4,6 +4,7 @@ const {
   updateEvent,
   insertEvent,
   getEventDetail,
+  updatePaymentImageService,
 } = require("./events.service");
 const router = Router();
 
@@ -86,11 +87,51 @@ router.get("/", async (req, res) => {
   }
 });
 
+router.get("/admin", async (req, res) => {
+  try {
+    const filter = {
+      orderBy: {
+        created_at: "desc",
+      },
+      include: {
+        channels: true,
+        favorites: true,
+        tags: true,
+        categories: true,
+        user_events: {
+          select: {
+            users: true,
+          },
+        },
+      },
+    };
+
+    const events = await getAllEvents(filter);
+
+    res.send(events);
+  } catch (error) {
+    console.error("Error retrieving events:", error.message);
+    res.status(400).send(error.message);
+  }
+});
+
 router.post("/:event_id", async (req, res) => {
   try {
     const { event_id } = req.params;
     const updatedEvent = await updateEvent(req.body, event_id);
     res.send(updatedEvent);
+  } catch (error) {
+    res.status(400).send(error.message);
+  }
+});
+
+router.post("/:event_id/payment", async (req, res) => {
+  try {
+    const { event_id } = req.params;
+    const { image } = req.body;
+    const updatedPayment = await updatePaymentImageService(event_id, image);
+    console.log(updatedPayment);
+    res.send(updatedPayment);
   } catch (error) {
     res.status(400).send(error.message);
   }
