@@ -11,17 +11,30 @@ const router = Router();
 router.get("/", async (req, res) => {
   try {
     // Ambil parameter query dari URL
-    const name = req.query.name || null;
-    const user_id = req.query.users || null;
+    const name = req.query.name !== "undefined" ? req.query.name : null;
+    const user_id = req.query.users !== "undefined" ? req.query.users : null;
     const status = req.query.status || "ONGOING";
-    console.log("user_id", user_id);
-    const is_paid = req.query.is_paid
-      ? req.query.is_paid === "true"
-      : undefined;
-    const tags = req.query.tags ? req.query.tags.split(",") : [];
-    const categories = req.query.categories
-      ? req.query.categories.split(",")
-      : [];
+    const is_paid =
+      req.query.prices !== "undefined" && req.query.prices.length > 0
+        ? req.query.prices.split(",")
+        : [];
+    const tags =
+      req.query.tags !== "undefined" && req.query.tags.length
+        ? req.query.tags.split(",")
+        : [];
+    const categories =
+      req.query.categories !== "undefined" && req.query.categories.length
+        ? req.query.categories.split(",")
+        : [];
+
+    const isPaidFilters =
+      is_paid.length > 0
+        ? is_paid.map((status) => {
+            if (status === "PAID") return true;
+            if (status === "UNPAID") return false;
+            return null;
+          })
+        : [];
 
     // Membuat objek filter berdasarkan parameter yang diterima
     const filter = {
@@ -51,8 +64,8 @@ router.get("/", async (req, res) => {
       };
     }
 
-    if (is_paid !== undefined) {
-      filter.where.is_paid = is_paid;
+    if (isPaidFilters.length === 1) {
+      filter.where.is_paid = isPaidFilters[0];
     }
 
     if (tags.length > 0) {
