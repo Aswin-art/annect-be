@@ -89,18 +89,29 @@ const findbyid = async (id, user_id) => {
 };
 
 const insert = async (channelsdata) => {
-  const ch = await prisma.channels.create({
-    data: {
-      id: cuid(),
-      user_id: channelsdata.user_id,
-      name: channelsdata.name,
-      description: channelsdata.description,
-      image: channelsdata.image,
-      no_rek: channelsdata.no_rek,
-      nik: channelsdata.nik,
-    },
-  });
-  return ch;
+  try {
+    const ch = await prisma.channels.create({
+      data: {
+        id: cuid(),
+        users: {
+          connect: {
+            id: channelsdata.user_id,
+          },
+        },
+        name: channelsdata.name,
+        description: channelsdata.description,
+        image: channelsdata.image,
+        email: channelsdata.email,
+        nik: channelsdata.nik,
+        ktp_photo: channelsdata.ktp_photo,
+        phone: channelsdata.phone,
+      },
+    });
+    return ch;
+  } catch (err) {
+    console.log(err);
+    return null;
+  }
 };
 
 const edit = async (id, channelsdata) => {

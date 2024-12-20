@@ -37,7 +37,7 @@ router.get("/users/:user_id", async (req, res) => {
 router.get("/:id/:user_id", async (req, res) => {
   try {
     const id = req.params.id;
-    const user_id = req.params.user_id
+    const user_id = req.params.user_id;
     const ch = await getbyid(id, user_id);
     res.send(ch);
   } catch (error) {
@@ -52,7 +52,6 @@ router.post("/", async (req, res) => {
 
   try {
     const channelsdata = req.body;
-    console.log(channelsdata);
     // channelsdata.image = image;
     // channelsdata.ktp = ktp;
     const ch = await create(channelsdata);
