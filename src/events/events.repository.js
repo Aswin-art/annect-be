@@ -21,7 +21,6 @@ const getDetail = (eventId) =>
       favorites: true,
       channels: true,
       tags: true,
-      categories: true,
     },
   });
 
@@ -40,18 +39,13 @@ const getSimilar = (currentEventId, eventTagId, eventCategoryId) =>
   });
 
 const insert = (eventData) => {
-  const { tag_id, category_id, channel_id, ...rest } = eventData;
+  const { tag_id, channel_id, ...rest } = eventData;
   return prisma.events.create({
     data: {
       ...rest,
       tags: {
         connect: {
           id: tag_id,
-        },
-      },
-      categories: {
-        connect: {
-          id: category_id,
         },
       },
       channels: {

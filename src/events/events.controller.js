@@ -110,7 +110,6 @@ router.get("/admin", async (req, res) => {
         channels: true,
         favorites: true,
         tags: true,
-        categories: true,
         user_events: {
           select: {
             users: true,
