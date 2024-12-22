@@ -15,7 +15,6 @@ const finduserbyid = async (id) => {
         include: {
           events: {
             include: {
-              categories: true,
               tags: true,
               channels: true,
             },
@@ -48,7 +47,6 @@ const finduserbyid = async (id) => {
         include: {
           events: {
             include: {
-              categories: true,
               tags: true,
             },
           },
@@ -104,7 +102,6 @@ const findHistoryEvent = async (user_id) => {
       events: {
         include: {
           tags: true,
-          categories: true,
         },
       },
     },

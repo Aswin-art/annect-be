@@ -48,7 +48,6 @@ const findchannelbyiduser = async (user_id) => {
     include: {
       events: {
         include: {
-          categories: true,
           tags: true,
           user_events: true,
         },
