@@ -42,9 +42,9 @@ const getSimilar = (currentEventId, eventTagId) =>
     },
   });
 
-const insert = (eventData) => {
+const insert = async (eventData) => {
   const { tag_id, channel_id, ...rest } = eventData;
-  const res = prisma.events.create({
+  const res = await prisma.events.create({
     data: {
       ...rest,
       tags: {

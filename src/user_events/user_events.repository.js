@@ -33,14 +33,21 @@ const updateStatus = (updated_user_event_status) =>
     },
   });
 
-const insert = (user_id, event_id, status) =>
-  prisma.user_events.create({
-    data: {
-      user_id: user_id,
-      event_id: event_id,
-      status: status,
-    },
-  });
+const insert = async (user_id, event_id, status) => {
+  try {
+    const res = await prisma.user_events.create({
+      data: {
+        user_id: user_id,
+        event_id: event_id,
+        status: status,
+      },
+    });
+
+    console.log(res);
+  } catch (err) {
+    console.log(err);
+  }
+};
 
 module.exports = {
   getById,

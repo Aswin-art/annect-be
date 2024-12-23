@@ -15,7 +15,7 @@ const updatePaymentImageService = async (eventId, paymentImage) =>
   await updatePaymentImage(eventId, paymentImage);
 
 const insertEvent = async (eventData) => {
-  return insert(eventData);
+  return await insert(eventData);
 };
 
 const getEventDetail = async (event_id, user_id) => {
