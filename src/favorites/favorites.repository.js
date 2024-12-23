@@ -8,7 +8,6 @@ const getAll = async (user_id) =>
     include: {
       events: {
         include: {
-          categories: true,
           channels: true,
           tags: true,
         },

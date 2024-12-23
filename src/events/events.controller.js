@@ -14,26 +14,9 @@ router.get("/", async (req, res) => {
     const name = req.query.name !== "undefined" ? req.query.name : null;
     const user_id = req.query.users !== "undefined" ? req.query.users : null;
     const status = req.query.status || "ONGOING";
-    const is_paid =
-      req.query.prices !== "undefined" && req.query.prices.length > 0
-        ? req.query.prices.split(",")
-        : [];
     const tags =
       req.query.tags !== "undefined" && req.query.tags.length
         ? req.query.tags.split(",")
-        : [];
-    const categories =
-      req.query.categories !== "undefined" && req.query.categories.length
-        ? req.query.categories.split(",")
-        : [];
-
-    const isPaidFilters =
-      is_paid.length > 0
-        ? is_paid.map((status) => {
-            if (status === "PAID") return true;
-            if (status === "UNPAID") return false;
-            return null;
-          })
         : [];
 
     // Membuat objek filter berdasarkan parameter yang diterima
@@ -47,8 +30,6 @@ router.get("/", async (req, res) => {
       include: {
         channels: true,
         tags: tags.length > 0 ? { where: { id: { in: tags } } } : true,
-        categories:
-          categories.length > 0 ? { where: { id: { in: categories } } } : true,
         favorites: true,
         user_events: {
           select: {
@@ -64,19 +45,9 @@ router.get("/", async (req, res) => {
       };
     }
 
-    if (isPaidFilters.length === 1) {
-      filter.where.is_paid = isPaidFilters[0];
-    }
-
     if (tags.length > 0) {
       filter.where.tag_id = {
         in: tags,
-      };
-    }
-
-    if (categories.length > 0) {
-      filter.where.category_id = {
-        in: categories,
       };
     }
 

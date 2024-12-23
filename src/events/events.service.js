@@ -33,8 +33,6 @@ const getEventDetail = async (event_id, user_id) => {
     eventDetail.favorites.length > 0 &&
     user_id != null
   ) {
-    console.log(true);
-
     eventDetail.is_favorite = eventDetail.favorites.some(
       (favorite) => favorite.user_id === user_id
     );
@@ -50,11 +48,7 @@ const getEventDetail = async (event_id, user_id) => {
     );
   }
 
-  const similarEvent = await getSimilar(
-    eventDetail.id,
-    eventDetail.tag_id,
-    eventDetail.channel_id
-  );
+  const similarEvent = await getSimilar(eventDetail.id, eventDetail.tag_id);
   eventDetail.similar_event = similarEvent;
   return eventDetail;
 };

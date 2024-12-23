@@ -24,14 +24,11 @@ const getDetail = (eventId) =>
     },
   });
 
-const getSimilar = (currentEventId, eventTagId, eventCategoryId) =>
+const getSimilar = (currentEventId, eventTagId) =>
   prisma.events.findMany({
     take: 3,
     where: {
-      OR: [
-        { tag_id: { equals: eventTagId } },
-        { category_id: { equals: eventCategoryId } },
-      ],
+      OR: [{ tag_id: { equals: eventTagId } }],
       NOT: {
         id: { equals: currentEventId },
       },

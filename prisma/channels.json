@@ -1,91 +1,42 @@
 [
   {
-    "id": "ck9wz8q7v000001mqcn64htz8",
-    "user_id": "user_2kyN7GxSTQcjdJTq8vRG4RkzW8F",
-    "name": "Tech Talks",
-    "description": "<p>Channel diskusi tentang the latest in technology. Di sini, kita akan membahas berbagai topik terkait teknologi terbaru, mulai dari perkembangan perangkat keras hingga perangkat lunak. Kami juga akan mengulas tren teknologi yang sedang berkembang, inovasi terbaru, dan bagaimana teknologi mempengaruhi kehidupan sehari-hari kita.<br>Selain itu, kami akan mengundang para ahli di bidang teknologi untuk berbagi wawasan dan pengalaman mereka. Bergabunglah dengan kami untuk mendapatkan informasi terkini dan mendalam tentang dunia teknologi.</p>",
-    "image": "https://i1.sndcdn.com/avatars-000176292863-punfie-original.jpg",
-    "email": "dummy@gmail.com",
-    "status": "UNVERIFIED",
-    "nik": "3646565633",
-    "ktp_photo": "3646565633",
-    "phone": "00112233"
+    "channel_id": "BTCAdewa19",
+    "name": "Dewa 19 Band",
+    "description": "Dewa 19 adalah salah satu band legendaris dari Indonesia yang dikenal luas karena karya-karyanya yang ikonik dan berpengaruh di industri musik tanah air. Band ini dibentuk pada tahun 1986 di Surabaya oleh Ahmad Dhani, Andra Junaidi, dan beberapa anggota lainnya.",
+    "image": "https://asset-2.tstatic.net/tribunnews/foto/bank/images/dewa-19-aaaa.jpg",
+    "email": "cs@dewa19.com",
+    "status": "VERIFIED"
   },
   {
-    "id": "ck9x1rs8v000002mqcn64htza",
-    "user_id": "user_3klL7HyUBVdnmKPz9jFD5SxZ1KX",
-    "name": "Code Masters",
-    "description": "<p>Channel untuk berbagi tips dan trik coding. Di sini, kita akan membahas berbagai teknik pemrograman, mulai dari dasar hingga tingkat lanjut. Kami juga akan mengulas berbagai bahasa pemrograman, framework, dan alat bantu yang dapat membantu Anda menjadi programmer yang lebih baik.<br>Selain itu, kami akan mengadakan sesi tanya jawab, workshop, dan coding challenge untuk mengasah keterampilan Anda. Bergabunglah dengan kami untuk belajar, berbagi, dan berkembang bersama komunitas programmer yang antusias.</p>",
-    "image": "https://static1.makeuseofimages.com/wordpress/wp-content/uploads/2020/11/programming-2115930_1920.jpg",
-    "nik": "3646565634",
-    "status": "VERIFIED",
-    "no_rek": "3646565634",
-    "phone": "00112233"
+    "channel_id": "BTCAsheilaon7",
+    "name": "Sheila On 7 Band",
+    "description": "Sheila On 7 adalah band pop rock legendaris asal Yogyakarta, Indonesia, yang dibentuk pada tanggal 6 Mei 1996. Band ini dikenal karena lagu-lagunya yang sederhana, relatable, dan memiliki lirik yang sangat dekat dengan kehidupan sehari-hari. Sheila On 7 sering disebut sebagai salah satu band paling sukses di Indonesia.",
+    "image": "https://thumb.tvonenews.com/thumbnail/2024/10/30/67226196bc1f6-lirik-lagu-sheila-on-7-mudah-saja_1265_711.jpg",
+    "email": "marketing@so7.co.id",
+    "status": "VERIFIED"
   },
   {
-    "id": "ck9x2rs9v000003mqcn64htzb",
-    "user_id": "user_4mnO9IjVWCemqLPz0gHY7UvA2KL",
-    "name": "Green Energy",
-    "description": "<p>Channel diskusi tentang energi terbarukan. Di sini, kita akan membahas berbagai topik terkait energi hijau, mulai dari teknologi terbaru dalam energi surya, angin, dan air, hingga kebijakan dan regulasi yang mendukung penggunaan energi terbarukan.<br>Kami juga akan mengulas berbagai proyek dan inisiatif yang sedang berjalan di seluruh dunia untuk mempromosikan penggunaan energi bersih.<br>Selain itu, kami akan mengundang para ahli di bidang energi terbarukan untuk berbagi wawasan dan pengalaman mereka. Bergabunglah dengan kami untuk mendapatkan informasi terkini dan mendalam tentang dunia energi terbarukan.</p>",
-    "image": "https://4.bp.blogspot.com/-fsI6KYYzZ7o/UVAeSKaSmVI/AAAAAAAAAHg/EwuQRvqKxyw/s1600/Green+Energy+Tips.jpg",
-    "nik": "3646565635",
-    "status": "VERIFIED",
-    "no_rek": "3646565635",
-    "phone": "00112233"
+    "channel_id": "BTCAsuarasurabaya",
+    "name": "Suara Surabaya FM 100",
+    "description": "Suara Surabaya adalah salah satu stasiun radio legendaris di Indonesia, yang berbasis di Kota Surabaya, Jawa Timur. Stasiun ini dikenal sebagai pelopor radio berbasis layanan publik (public service) yang memberikan informasi terkini, interaktif, dan terpercaya bagi pendengarnya. Didirikan pada 11 Juni 1983, Suara Surabaya telah menjadi media yang sangat dekat dengan masyarakat, khususnya di Jawa Timur.",
+    "image": "https://www.suarasurabaya.net/wp-content/uploads/2021/03/1614566064918-840x493.jpg",
+    "email": "redaksi@suarasurabaya.net",
+    "status": "VERIFIED"
   },
   {
-    "id": "ck9x3rs0v000004mqcn64htzc",
-    "user_id": "user_5opQ1KlXDFngrQRz1hIJ8WxB3MO",
-    "name": "Digital Marketing",
-    "description": "<p>Channel untuk diskusi tentang strategi pemasaran digital. Di sini, kita akan membahas berbagai teknik dan strategi untuk mempromosikan produk dan layanan secara online. Kami juga akan mengulas berbagai alat dan platform yang dapat membantu Anda mencapai audiens yang lebih luas dan meningkatkan konversi.<br>Selain itu, kami akan mengadakan sesi tanya jawab, workshop, dan studi kasus untuk membantu Anda memahami dan menerapkan strategi pemasaran digital yang efektif.<br>Bergabunglah dengan kami untuk belajar, berbagi, dan berkembang bersama komunitas pemasaran digital yang antusias.</p>",
-    "image": "https://prod-discovery.edx-cdn.org/media/programs/card_images/1ff20015-8a46-48a8-8cfb-914d2f244b83-62701c6e666d.jpg",
-    "nik": "3646565636",
-    "status": "VERIFIED",
-    "no_rek": "3646565636",
-    "phone": "00112233"
+    "channel_id": "BTCAmalakaproject",
+    "name": "Malaka Project",
+    "description": "Malaka Project adalah sebuah komunitas yang dikenal dengan nama 'Masyarakat Baru,' aktif dalam berbagai kegiatan kreatif dan edukatif di Indonesia. Mereka sering mengadakan acara, kursus singkat, dan kolaborasi dengan berbagai institusi.",
+    "image": "https://assets.kompasiana.com/items/album/2023/12/28/large-thumbnail-buat-gnfi-1d166e2cdc04c3ac73566e028c1320f8-658c6731de948f0624017632.png?t=o&v=740&x=416",
+    "email": "collabwithmalaka@gmail.com",
+    "status": "UNVERIFIED"
   },
   {
-    "id": "ck9x4rs1v000005mqcn64htzd",
-    "user_id": "user_6qrS3MpYZHosoTRz2kKL9AyC4PQ",
-    "name": "AI Revolution",
-    "description": "<p>Channel yang membahas perkembangan terbaru dalam AI. Di sini, kita akan membahas berbagai topik terkait kecerdasan buatan, mulai dari algoritma dan teknik pembelajaran mesin hingga aplikasi praktis AI dalam berbagai industri.<br>Kami juga akan mengulas tren terbaru dalam penelitian AI, inovasi terbaru, dan bagaimana AI mempengaruhi kehidupan sehari-hari kita. Selain itu, kami akan mengundang para ahli di bidang AI untuk berbagi wawasan dan pengalaman mereka.<br>Bergabunglah dengan kami untuk mendapatkan informasi terkini dan mendalam tentang dunia kecerdasan buatan.</p>",
-    "image": "https://aiworldschool.com/wp-content/uploads/2022/01/MicrosoftTeams-image-224.jpg",
-    "nik": "3646565637",
-    "status": "VERIFIED",
-    "no_rek": "3646565637",
-    "phone": "00112233"
-  },
-  {
-    "id": "ck9x4rs1v000005mqcn69htzd",
-    "user_id": "user_6qrS3MpYZHosoTRz2kKL9AyC4PQ",
-    "name": "ComHaton",
-    "description": "<p>Channel yang membahas kompetisi dan hackathon. Di sini, kita akan membahas berbagai topik terkait kompetisi pemrograman dan hackathon, mulai dari persiapan hingga strategi untuk memenangkan kompetisi. Kami juga akan mengulas berbagai kompetisi dan hackathon yang sedang berlangsung di seluruh dunia, serta memberikan tips dan trik untuk meningkatkan keterampilan Anda.<br>Selain itu, kami akan mengundang para pemenang kompetisi dan hackathon untuk berbagi pengalaman dan wawasan mereka. Bergabunglah dengan kami untuk mendapatkan informasi terkini dan mendalam tentang dunia kompetisi dan hackathon.</p>",
-    "image": "https://assets.website-files.com/5d2ed51487801d2a4ca10119/611299288db0b637d1059792_49147453457_e105c6e656_k-p-1600.jpeg",
-    "nik": "3646565637",
-    "status": "VERIFIED",
-    "no_rek": "3646565637",
-    "phone": "00112233"
-  },
-  {
-    "id": "ck9x4rs1v666665mqcn69htzd",
-    "user_id": "user_5opQ1KlXDFngrQRz1hIJ8WxB3MO",
-    "name": "ScholarShipper",
-    "description": "<p>Channel yang membahas info terbaru tentang beasiswa dalam negeri dan luar negeri. Di sini, kita akan membahas berbagai topik terkait beasiswa, mulai dari persyaratan hingga proses aplikasi. Kami juga akan mengulas berbagai jenis beasiswa yang tersedia, baik dari pemerintah, lembaga swasta, maupun universitas. Selain itu, kami akan memberikan tips dan trik untuk meningkatkan peluang Anda mendapatkan beasiswa.<br>Kami juga akan mengundang para penerima beasiswa untuk berbagi pengalaman dan wawasan mereka. Bergabunglah dengan kami untuk mendapatkan informasi terkini dan mendalam tentang dunia beasiswa.</p>",
-    "image": "https://imageio.forbes.com/specials-images/imageserve/5fb2d344abf7d301612e2395/0x0.jpg?format=jpg&width=1200",
-    "nik": "3646565637",
-    "status": "VERIFIED",
-    "no_rek": "3646565637",
-    "phone": "00112233"
-  },
-  {
-    "id": "ck9x4rs14587625mqcn69htzd",
-    "user_id": "user_4mnO9IjVWCemqLPz0gHY7UvA2KL",
-    "name": "SimpBinar",
-    "description": "<p>Channel yang membahas info seminar, konferensi, dan webinar. Di sini, kita akan membahas berbagai topik terkait acara-acara tersebut, mulai dari persiapan hingga pelaksanaan. Kami juga akan mengulas berbagai seminar, konferensi, dan webinar yang sedang berlangsung di seluruh dunia, serta memberikan tips dan trik untuk memaksimalkan pengalaman Anda.<br>Selain itu, kami akan mengundang para penyelenggara dan peserta acara untuk berbagi pengalaman dan wawasan mereka. Bergabunglah dengan kami untuk mendapatkan informasi terkini dan mendalam tentang dunia seminar, konferensi, dan webinar.</p>",
-    "image": "https://trustedchain.it/wp-content/uploads/2021/02/webinar.jpg",
-    "nik": "3646565637",
-    "status": "VERIFIED",
-    "no_rek": "3646565637",
-    "phone": "00112233"
+    "channel_id": "BTCAndxaka",
+    "name": "NDX A.K.A.",
+    "description": "NDX AKA adalah grup musik hip-hop dangdut yang berasal dari Yogyakarta, Indonesia. Mereka dikenal karena gaya musik yang menggabungkan unsur dangdut dengan hip-hop, menciptakan genre khas yang disebut hip-hop dangdut koplo. NDX AKA sering membawakan lagu dengan lirik yang menyentuh hati, bercerita tentang cinta, kehidupan, dan perjuangan.",
+    "image": "https://cms.disway.id/uploads/27bffb6e4eada0a1aa1c09c0b60b27d2.png",
+    "email": "contact@ndxaka.my.id",
+    "status": "VERIFIED"
   }
 ]

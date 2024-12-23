@@ -1,30 +1,22 @@
 [
   {
-    "id": "ck9x3sl7v000002nqjc4pqvth",
-    "name": "Beasiswa"
+    "id": "BTTGpameran",
+    "name": "Pameran"
   },
   {
-    "id": "ck9x3sl7v000003oqjc4pqvti",
-    "name": "Seminar"
+    "id": "BTTGbazaar",
+    "name": "Bazaar"
   },
   {
-    "id": "ck9x3sl7v000004pqjc4pqvtj",
-    "name": "Bootcamp"
+    "id": "BTTGkonser",
+    "name": "Konser"
   },
   {
-    "id": "ck9x3sl7v000005rqjc4pqvtk",
+    "id": "BTTGtalkshow",
+    "name": "Talkshow"
+  },
+  {
+    "id": "BTTGworkshop",
     "name": "Workshop"
-  },
-  {
-    "id": "ck9x3sl7v000006sqjc4ppppp",
-    "name": "Lomba"
-  },
-  {
-    "id": "ck9x3sl7v000007sqjc4pqvtl",
-    "name": "Lainnya"
-  },
-  {
-    "id": "ck9x3sl7v000008oqjc4pqvti",
-    "name": "Webinar"
   }
 ]
