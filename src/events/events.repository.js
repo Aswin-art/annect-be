@@ -11,18 +11,25 @@ const getById = (eventId) =>
     },
   });
 
-const getDetail = (eventId) =>
-  prisma.events.findUnique({
-    where: {
-      id: eventId,
-    },
-    include: {
-      user_events: true,
-      favorites: true,
-      channels: true,
-      tags: true,
-    },
-  });
+const getDetail = async (eventId) => {
+  try {
+    const res = await prisma.events.findUnique({
+      where: {
+        id: Number(eventId),
+      },
+      include: {
+        user_events: true,
+        favorites: true,
+        channels: true,
+        tags: true,
+      },
+    });
+    return res;
+  } catch (err) {
+    console.log(err);
+    return null;
+  }
+};
 
 const getSimilar = (currentEventId, eventTagId) =>
   prisma.events.findMany({
@@ -37,7 +44,7 @@ const getSimilar = (currentEventId, eventTagId) =>
 
 const insert = (eventData) => {
   const { tag_id, channel_id, ...rest } = eventData;
-  return prisma.events.create({
+  const res = prisma.events.create({
     data: {
       ...rest,
       tags: {
@@ -52,6 +59,8 @@ const insert = (eventData) => {
       },
     },
   });
+
+  return res;
 };
 
 const updateById = (eventData, eventId) =>
