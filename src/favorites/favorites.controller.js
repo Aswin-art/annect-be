@@ -4,8 +4,7 @@ const {
   deleteFavorite,
   insertUserFavorite,
 } = require("./favorites.service");
-const favoriteInsertSchema = require("../schema/favorite");
-const { fromError } = require('zod-validation-error');
+const { fromError } = require("zod-validation-error");
 const { ZodError } = require("zod");
 const router = Router();
 
@@ -21,7 +20,6 @@ router.get("/users/:user_id/follows", async (req, res) => {
 
 router.post("/favorites/add", async (req, res) => {
   try {
-    favoriteInsertSchema.parse(req.body);
     await insertUserFavorite(req.body);
     res.send({
       message: "Success",

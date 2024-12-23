@@ -3,14 +3,6 @@ const cuid = require("cuid");
 
 const findall = async (name, user_id) => {
   const ch = await prisma.channels.findMany({
-    where: {
-      NOT: {
-        user_id: user_id,
-      },
-      name: {
-        contains: name,
-      },
-    },
     include: {
       users: true,
       follows: true,
@@ -24,6 +16,8 @@ const findall = async (name, user_id) => {
       created_at: "desc",
     },
   });
+
+  console.log("repo", ch);
 
   ch.forEach((channel) => {
     channel.is_following = false;
